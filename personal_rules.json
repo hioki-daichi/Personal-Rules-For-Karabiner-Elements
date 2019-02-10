@@ -848,13 +848,112 @@
             }
           ],
           "from": {
+            "key_code": "n",
+            "modifiers": {
+              "mandatory": [
+                "shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "mouse_key": {
+                "x": -1536
+              }
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "vk1",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "m",
+            "modifiers": {
+              "mandatory": [
+                "shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "mouse_key": {
+                "y": 1536
+              }
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "vk1",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "comma",
+            "modifiers": {
+              "mandatory": [
+                "shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "mouse_key": {
+                "y": -1536
+              }
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "vk1",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "period",
+            "modifiers": {
+              "mandatory": [
+                "shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "mouse_key": {
+                "x": 1536
+              }
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "vk1",
+              "value": 1
+            }
+          ],
+          "from": {
             "key_code": "n"
           },
           "to": [
             {
               "mouse_key": {
-                "x": -768,
-                "speed_multiplier": 3
+                "x": -3072
               }
             }
           ]
@@ -874,8 +973,7 @@
           "to": [
             {
               "mouse_key": {
-                "y": 768,
-                "speed_multiplier": 3
+                "y": 3072
               }
             }
           ]
@@ -895,8 +993,7 @@
           "to": [
             {
               "mouse_key": {
-                "y": -768,
-                "speed_multiplier": 3
+                "y": -3072
               }
             }
           ]
@@ -916,8 +1013,7 @@
           "to": [
             {
               "mouse_key": {
-                "x": 768,
-                "speed_multiplier": 3
+                "x": 3072
               }
             }
           ]
@@ -927,29 +1023,6 @@
     {
       "description": "[VK1] / -> mouse click",
       "manipulators": [
-        {
-          "type": "basic",
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "vk1",
-              "value": 1
-            }
-          ],
-          "from": {
-            "key_code": "slash",
-            "modifiers": {
-              "mandatory": [
-                "shift"
-              ]
-            }
-          },
-          "to": [
-            {
-              "pointing_button": "button2"
-            }
-          ]
-        },
         {
           "type": "basic",
           "conditions": [

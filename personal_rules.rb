@@ -180,16 +180,19 @@ puts ({
     {
       description: "[VK1] n/m/comma/dot -> mouse move",
       manipulators: [
-        {from: { key_code: "n" }, to: [{mouse_key: {x: -768, speed_multiplier: 3.0}}]},
-        {from: { key_code: "m" }, to: [{mouse_key: {y: 768, speed_multiplier: 3.0}}]},
-        {from: { key_code: "comma" }, to: [{mouse_key: {y: -768, speed_multiplier: 3.0}}]},
-        {from: { key_code: "period" }, to: [{mouse_key: {x: 768, speed_multiplier: 3.0}}]},
+        {from: {key_code: "n", modifiers: {mandatory: ["shift"]}}, to: [{mouse_key: {x: -1536}}]},
+        {from: {key_code: "m", modifiers: {mandatory: ["shift"]}}, to: [{ mouse_key: { y: 1536 } }]},
+        {from: {key_code: "comma", modifiers: {mandatory: ["shift"]}}, to: [{mouse_key: {y: -1536}}]},
+        {from: {key_code: "period", modifiers: {mandatory: ["shift"]}}, to: [{ mouse_key: { x: 1536 } }]},
+        {from: { key_code: "n" }, to: [{mouse_key: {x: -3072}}]},
+        {from: { key_code: "m" }, to: [{ mouse_key: { y: 3072 } }]},
+        {from: { key_code: "comma" }, to: [{mouse_key: {y: -3072}}]},
+        {from: { key_code: "period" }, to: [{ mouse_key: { x: 3072 } }]},
       ].vk1.basic,
     },
     {
       description: "[VK1] / -> mouse click",
       manipulators: [
-        {from: {key_code: "slash", modifiers: {mandatory: ["shift"]}}, to: [{ pointing_button: "button2" }]},
         {from: {key_code: "slash", modifiers: {optional: ["any"]}}, to: [{ pointing_button: "button1" }]},
       ].vk1.basic,
     },
