@@ -81,6 +81,7 @@ puts ({
           from: { key_code: key_code },
           to: [{set_variable: {name: VirtualKeys::VK1, value: Values::ON}}],
           to_after_key_up: [{set_variable: {name: VirtualKeys::VK1, value: Values::OFF}}],
+          to_if_alone: [{ key_code: "japanese_kana" }],
         }
       end.basic,
     },
@@ -91,6 +92,7 @@ puts ({
           from: { key_code: key_code },
           to: [{set_variable: {name: VirtualKeys::VK2, value: Values::ON}}],
           to_after_key_up: [{set_variable: {name: VirtualKeys::VK2, value: Values::OFF}}],
+          to_if_alone: [{ key_code: "japanese_eisuu" }],
         }
       end.basic,
     },

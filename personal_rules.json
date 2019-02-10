@@ -24,6 +24,11 @@
                 "value": 0
               }
             }
+          ],
+          "to_if_alone": [
+            {
+              "key_code": "japanese_kana"
+            }
           ]
         },
         {
@@ -45,6 +50,11 @@
                 "name": "vk1",
                 "value": 0
               }
+            }
+          ],
+          "to_if_alone": [
+            {
+              "key_code": "japanese_kana"
             }
           ]
         }
@@ -73,6 +83,11 @@
                 "value": 0
               }
             }
+          ],
+          "to_if_alone": [
+            {
+              "key_code": "japanese_eisuu"
+            }
           ]
         },
         {
@@ -94,6 +109,11 @@
                 "name": "vk2",
                 "value": 0
               }
+            }
+          ],
+          "to_if_alone": [
+            {
+              "key_code": "japanese_eisuu"
             }
           ]
         }
