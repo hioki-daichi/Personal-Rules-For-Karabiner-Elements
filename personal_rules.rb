@@ -246,6 +246,20 @@ puts ({
       ].vk2.basic,
     },
     {
+      description: "[VK2] 1/2 -> volume decrement/increment",
+      manipulators: [
+        {from: { key_code: "1" }, to: [{ key_code: "volume_decrement" }]},
+        {from: { key_code: "2" }, to: [{ key_code: "volume_increment" }]},
+      ].vk2.basic,
+    },
+    {
+      description: "[VK2] 3/4 -> display brightness decrement/increment",
+      manipulators: [
+        {from: { key_code: "3" }, to: [{ key_code: "display_brightness_decrement" }]},
+        {from: { key_code: "4" }, to: [{ key_code: "display_brightness_increment" }]},
+      ].vk2.basic,
+    },
+    {
       description: "[VK2] ShiftIt",
       manipulators: [
         {from: { key_code: "h" }, to: [{key_code: "left_arrow", modifiers: ["command", "control", "option"]}]},
