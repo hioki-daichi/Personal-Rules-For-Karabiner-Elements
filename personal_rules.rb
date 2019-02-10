@@ -303,6 +303,15 @@ puts ({
       ].vk2.basic,
     },
     {
+      description: "[VK2] e -> snip search by Alfred 3",
+      manipulators: [
+        {
+          from: { key_code: "e" },
+          to: [{ shell_command: %q!osascript -e "tell application \"Alfred 3\" to search \"snip \""! }],
+        },
+      ].vk2.basic,
+    },
+    {
       description: "[VK2] / -> Slack.app",
       manipulators: [
         {
