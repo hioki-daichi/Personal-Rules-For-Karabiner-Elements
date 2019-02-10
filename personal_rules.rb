@@ -6,10 +6,12 @@ module VirtualKeys
   VK1 = "vk1"
   VK2 = "vk2"
   VK3 = "vk3"
+  VK4 = "vk4"
 end
 
 module BundleIdentifiers
   ITERM2 = "com.googlecode.iterm2"
+  VSCODE = "com.microsoft.VSCode"
 end
 
 module Values
@@ -21,8 +23,10 @@ module Conditions
   WITH_VK1 = {type: "variable_if", name: VirtualKeys::VK1, value: Values::ON}
   WITH_VK2 = {type: "variable_if", name: VirtualKeys::VK2, value: Values::ON}
   WITH_VK3 = {type: "variable_if", name: VirtualKeys::VK3, value: Values::ON}
+  WITH_VK4 = {type: "variable_if", name: VirtualKeys::VK4, value: Values::ON}
 
   ON_ITERM2 = {type: "frontmost_application_if", bundle_identifiers: [BundleIdentifiers::ITERM2]}
+  ON_VSCODE = {type: "frontmost_application_if", bundle_identifiers: [BundleIdentifiers::VSCODE]}
 end
 
 class Array
@@ -42,9 +46,29 @@ class Array
     map! { |h| {conditions: [Conditions::WITH_VK3]}.merge!(h) }
   end
 
+  def vk4
+    map! { |h| {conditions: [Conditions::WITH_VK4]}.merge!(h) }
+  end
+
   def iterm2_vk1
     map! { |h| {conditions: [Conditions::ON_ITERM2, Conditions::WITH_VK1]}.merge!(h) }
   end
+
+  def vscode_vk4
+    map! { |h| {conditions: [Conditions::ON_VSCODE, Conditions::WITH_VK4]}.merge!(h) }
+  end
+end
+
+def rule_for_vscode(key_code, command_name)
+  {
+    description: "[VSCODE][VK4] #{key_code} -> #{command_name}",
+    manipulators: [
+      {
+        from: { key_code: key_code },
+        to: [{key_code: key_code, modifiers: ["control", "shift", "option", "command"]}],
+      },
+    ].vscode_vk4.basic,
+  }
 end
 
 puts ({
@@ -80,6 +104,33 @@ puts ({
         }
       end.basic,
     },
+    {
+      description: "tab -> VK4",
+      manipulators: ["tab"].map! do |key_code|
+        {
+          from: { key_code: key_code },
+          to: [{set_variable: {name: VirtualKeys::VK4, value: Values::ON}}],
+          to_after_key_up: [{set_variable: {name: VirtualKeys::VK4, value: Values::OFF}}],
+          to_if_alone: [{ key_code: key_code }],
+        }
+      end.basic,
+    },
+    rule_for_vscode("1", "workbench.action.openSettingsJson"),
+    rule_for_vscode("2", "workbench.action.openGlobalKeybindingsFile"),
+    rule_for_vscode("3", "workbench.action.openGlobalKeybindings"),
+    rule_for_vscode("4", "workbench.view.extensions"),
+    rule_for_vscode("a", "workbench.action.toggleActivityBarVisibility"),
+    rule_for_vscode("h", "workbench.action.toggleSidebarVisibility"),
+    rule_for_vscode("j", "workbench.action.togglePanel"),
+    rule_for_vscode("e", "workbench.files.action.focusFilesExplorer"),
+    rule_for_vscode("l", "workbench.action.focusFirstEditorGroup"),
+    rule_for_vscode("s", "workbench.view.search"),
+    rule_for_vscode("p", "workbench.action.problems.focus"),
+    rule_for_vscode("o", "workbench.action.output.toggleOutput"),
+    rule_for_vscode("c", "workbench.debug.action.toggleRepl"),
+    rule_for_vscode("t", "workbench.action.terminal.focus"),
+    rule_for_vscode("k", "workbench.action.quickOpen"),
+    rule_for_vscode("r", "code-runner.run"),
     {
       description: "[iTerm2] o/p -> control+t control+p / control+t control+n",
       manipulators: [

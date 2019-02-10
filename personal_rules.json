@@ -127,6 +127,598 @@
       ]
     },
     {
+      "description": "tab -> VK4",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "tab"
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "vk4",
+                "value": 1
+              }
+            }
+          ],
+          "to_after_key_up": [
+            {
+              "set_variable": {
+                "name": "vk4",
+                "value": 0
+              }
+            }
+          ],
+          "to_if_alone": [
+            {
+              "key_code": "tab"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "[VSCODE][VK4] 1 -> workbench.action.openSettingsJson",
+      "manipulators": [
+        {
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "com.microsoft.VSCode"
+              ]
+            },
+            {
+              "type": "variable_if",
+              "name": "vk4",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "1"
+          },
+          "to": [
+            {
+              "key_code": "1",
+              "modifiers": [
+                "control",
+                "shift",
+                "option",
+                "command"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "[VSCODE][VK4] 2 -> workbench.action.openGlobalKeybindingsFile",
+      "manipulators": [
+        {
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "com.microsoft.VSCode"
+              ]
+            },
+            {
+              "type": "variable_if",
+              "name": "vk4",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "2"
+          },
+          "to": [
+            {
+              "key_code": "2",
+              "modifiers": [
+                "control",
+                "shift",
+                "option",
+                "command"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "[VSCODE][VK4] 3 -> workbench.action.openGlobalKeybindings",
+      "manipulators": [
+        {
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "com.microsoft.VSCode"
+              ]
+            },
+            {
+              "type": "variable_if",
+              "name": "vk4",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "3"
+          },
+          "to": [
+            {
+              "key_code": "3",
+              "modifiers": [
+                "control",
+                "shift",
+                "option",
+                "command"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "[VSCODE][VK4] 4 -> workbench.view.extensions",
+      "manipulators": [
+        {
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "com.microsoft.VSCode"
+              ]
+            },
+            {
+              "type": "variable_if",
+              "name": "vk4",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "4"
+          },
+          "to": [
+            {
+              "key_code": "4",
+              "modifiers": [
+                "control",
+                "shift",
+                "option",
+                "command"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "[VSCODE][VK4] a -> workbench.action.toggleActivityBarVisibility",
+      "manipulators": [
+        {
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "com.microsoft.VSCode"
+              ]
+            },
+            {
+              "type": "variable_if",
+              "name": "vk4",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "a"
+          },
+          "to": [
+            {
+              "key_code": "a",
+              "modifiers": [
+                "control",
+                "shift",
+                "option",
+                "command"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "[VSCODE][VK4] h -> workbench.action.toggleSidebarVisibility",
+      "manipulators": [
+        {
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "com.microsoft.VSCode"
+              ]
+            },
+            {
+              "type": "variable_if",
+              "name": "vk4",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "h"
+          },
+          "to": [
+            {
+              "key_code": "h",
+              "modifiers": [
+                "control",
+                "shift",
+                "option",
+                "command"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "[VSCODE][VK4] j -> workbench.action.togglePanel",
+      "manipulators": [
+        {
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "com.microsoft.VSCode"
+              ]
+            },
+            {
+              "type": "variable_if",
+              "name": "vk4",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "j"
+          },
+          "to": [
+            {
+              "key_code": "j",
+              "modifiers": [
+                "control",
+                "shift",
+                "option",
+                "command"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "[VSCODE][VK4] e -> workbench.files.action.focusFilesExplorer",
+      "manipulators": [
+        {
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "com.microsoft.VSCode"
+              ]
+            },
+            {
+              "type": "variable_if",
+              "name": "vk4",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "e"
+          },
+          "to": [
+            {
+              "key_code": "e",
+              "modifiers": [
+                "control",
+                "shift",
+                "option",
+                "command"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "[VSCODE][VK4] l -> workbench.action.focusFirstEditorGroup",
+      "manipulators": [
+        {
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "com.microsoft.VSCode"
+              ]
+            },
+            {
+              "type": "variable_if",
+              "name": "vk4",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "l"
+          },
+          "to": [
+            {
+              "key_code": "l",
+              "modifiers": [
+                "control",
+                "shift",
+                "option",
+                "command"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "[VSCODE][VK4] s -> workbench.view.search",
+      "manipulators": [
+        {
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "com.microsoft.VSCode"
+              ]
+            },
+            {
+              "type": "variable_if",
+              "name": "vk4",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "s"
+          },
+          "to": [
+            {
+              "key_code": "s",
+              "modifiers": [
+                "control",
+                "shift",
+                "option",
+                "command"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "[VSCODE][VK4] p -> workbench.action.problems.focus",
+      "manipulators": [
+        {
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "com.microsoft.VSCode"
+              ]
+            },
+            {
+              "type": "variable_if",
+              "name": "vk4",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "p"
+          },
+          "to": [
+            {
+              "key_code": "p",
+              "modifiers": [
+                "control",
+                "shift",
+                "option",
+                "command"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "[VSCODE][VK4] o -> workbench.action.output.toggleOutput",
+      "manipulators": [
+        {
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "com.microsoft.VSCode"
+              ]
+            },
+            {
+              "type": "variable_if",
+              "name": "vk4",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "o"
+          },
+          "to": [
+            {
+              "key_code": "o",
+              "modifiers": [
+                "control",
+                "shift",
+                "option",
+                "command"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "[VSCODE][VK4] c -> workbench.debug.action.toggleRepl",
+      "manipulators": [
+        {
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "com.microsoft.VSCode"
+              ]
+            },
+            {
+              "type": "variable_if",
+              "name": "vk4",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "c"
+          },
+          "to": [
+            {
+              "key_code": "c",
+              "modifiers": [
+                "control",
+                "shift",
+                "option",
+                "command"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "[VSCODE][VK4] t -> workbench.action.terminal.focus",
+      "manipulators": [
+        {
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "com.microsoft.VSCode"
+              ]
+            },
+            {
+              "type": "variable_if",
+              "name": "vk4",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "t"
+          },
+          "to": [
+            {
+              "key_code": "t",
+              "modifiers": [
+                "control",
+                "shift",
+                "option",
+                "command"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "[VSCODE][VK4] k -> workbench.action.quickOpen",
+      "manipulators": [
+        {
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "com.microsoft.VSCode"
+              ]
+            },
+            {
+              "type": "variable_if",
+              "name": "vk4",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "k"
+          },
+          "to": [
+            {
+              "key_code": "k",
+              "modifiers": [
+                "control",
+                "shift",
+                "option",
+                "command"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "[VSCODE][VK4] r -> code-runner.run",
+      "manipulators": [
+        {
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "com.microsoft.VSCode"
+              ]
+            },
+            {
+              "type": "variable_if",
+              "name": "vk4",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "r"
+          },
+          "to": [
+            {
+              "key_code": "r",
+              "modifiers": [
+                "control",
+                "shift",
+                "option",
+                "command"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "description": "[iTerm2] o/p -> control+t control+p / control+t control+n",
       "manipulators": [
         {
