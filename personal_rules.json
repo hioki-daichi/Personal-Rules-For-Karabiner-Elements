@@ -120,8 +120,30 @@
       ]
     },
     {
-      "description": "international2 -> VK3",
+      "description": "right_gui/international2 -> VK3",
       "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "right_gui"
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "vk3",
+                "value": 1
+              }
+            }
+          ],
+          "to_after_key_up": [
+            {
+              "set_variable": {
+                "name": "vk3",
+                "value": 0
+              }
+            }
+          ]
+        },
         {
           "type": "basic",
           "from": {

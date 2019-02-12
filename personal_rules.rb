@@ -97,8 +97,8 @@ puts ({
       end.basic,
     },
     {
-      description: "international2 -> VK3",
-      manipulators: ["international2"].map! do |key_code|
+      description: "right_gui/international2 -> VK3",
+      manipulators: ["right_gui", "international2"].map! do |key_code|
         {
           from: { key_code: key_code },
           to: [{set_variable: {name: VirtualKeys::VK3, value: Values::ON}}],
