@@ -77,7 +77,7 @@ def rule_for_iterm2_vk4(key_code)
   }
 end
 
-def rule_for_vscode(key_code, command_name)
+def rule_for_vscode_vk4(key_code, command_name)
   {
     description: "[VSCODE][VK4] #{key_code} -> #{command_name}",
     manipulators: [
@@ -143,22 +143,22 @@ puts ({
     rule_for_iterm2_vk4("l"),
     rule_for_iterm2_vk4("n"),
     rule_for_iterm2_vk4("p"),
-    rule_for_vscode("1", "workbench.action.openSettingsJson"),
-    rule_for_vscode("2", "workbench.action.openGlobalKeybindingsFile"),
-    rule_for_vscode("3", "workbench.action.openGlobalKeybindings"),
-    rule_for_vscode("4", "workbench.view.extensions"),
-    rule_for_vscode("a", "workbench.action.toggleActivityBarVisibility"),
-    rule_for_vscode("h", "workbench.action.toggleSidebarVisibility"),
-    rule_for_vscode("j", "workbench.action.togglePanel"),
-    rule_for_vscode("e", "workbench.files.action.focusFilesExplorer"),
-    rule_for_vscode("l", "workbench.action.focusFirstEditorGroup"),
-    rule_for_vscode("s", "workbench.view.search"),
-    rule_for_vscode("p", "workbench.action.problems.focus"),
-    rule_for_vscode("o", "workbench.action.output.toggleOutput"),
-    rule_for_vscode("c", "workbench.debug.action.toggleRepl"),
-    rule_for_vscode("t", "workbench.action.terminal.focus"),
-    rule_for_vscode("k", "workbench.action.quickOpen"),
-    rule_for_vscode("r", "code-runner.run"),
+    rule_for_vscode_vk4("1", "workbench.action.openSettingsJson"),
+    rule_for_vscode_vk4("2", "workbench.action.openGlobalKeybindingsFile"),
+    rule_for_vscode_vk4("3", "workbench.action.openGlobalKeybindings"),
+    rule_for_vscode_vk4("4", "workbench.view.extensions"),
+    rule_for_vscode_vk4("a", "workbench.action.toggleActivityBarVisibility"),
+    rule_for_vscode_vk4("h", "workbench.action.toggleSidebarVisibility"),
+    rule_for_vscode_vk4("j", "workbench.action.togglePanel"),
+    rule_for_vscode_vk4("e", "workbench.files.action.focusFilesExplorer"),
+    rule_for_vscode_vk4("l", "workbench.action.focusFirstEditorGroup"),
+    rule_for_vscode_vk4("s", "workbench.view.search"),
+    rule_for_vscode_vk4("p", "workbench.action.problems.focus"),
+    rule_for_vscode_vk4("o", "workbench.action.output.toggleOutput"),
+    rule_for_vscode_vk4("c", "workbench.debug.action.toggleRepl"),
+    rule_for_vscode_vk4("t", "workbench.action.terminal.focus"),
+    rule_for_vscode_vk4("k", "workbench.action.quickOpen"),
+    rule_for_vscode_vk4("r", "code-runner.run"),
     {
       description: "[iTerm2] o/p -> control+t control+p / control+t control+n",
       manipulators: [
