@@ -29,6 +29,8 @@ module Conditions
   ON_VSCODE = {type: "frontmost_application_if", bundle_identifiers: [BundleIdentifiers::VSCODE]}
 end
 
+TMUX_PREFIX = {key_code: "t", modifiers: ["control"]}
+
 class Array
   def basic
     map! { |h| { type: "basic" }.merge!(h) }
@@ -69,7 +71,7 @@ def rule_for_iterm2_vk4(key_code)
     manipulators: [
       {
         from: { key_code: key_code },
-        to: [{key_code: "t", modifiers: ["control"]}, {key_code: key_code, modifiers: ["control"]}],
+        to: [TMUX_PREFIX, {key_code: key_code, modifiers: ["control"]}],
       },
     ].iterm2_vk4.basic,
   }
@@ -160,15 +162,15 @@ puts ({
     {
       description: "[iTerm2] o/p -> control+t control+p / control+t control+n",
       manipulators: [
-        {from: { key_code: "o" }, to: [{key_code: "t", modifiers: ["control"]}, {key_code: "p", modifiers: ["control"]}]},
-        {from: { key_code: "p" }, to: [{key_code: "t", modifiers: ["control"]}, {key_code: "n", modifiers: ["control"]}]},
+        {from: { key_code: "o" }, to: [TMUX_PREFIX, {key_code: "p", modifiers: ["control"]}]},
+        {from: { key_code: "p" }, to: [TMUX_PREFIX, {key_code: "n", modifiers: ["control"]}]},
       ].iterm2_vk1.basic,
     },
     {
       description: "[iTerm2] z/y -> copy and paste",
       manipulators: [
-        {from: { key_code: "z" }, to: [{key_code: "t", modifiers: ["control"]}, {key_code: "close_bracket", modifiers: ["control"]}]},
-        {from: { key_code: "y" }, to: [{ key_code: "return_or_enter" }, {key_code: "t", modifiers: ["control"]}, {key_code: "m", modifiers: ["control"]}]},
+        {from: { key_code: "z" }, to: [TMUX_PREFIX, {key_code: "close_bracket", modifiers: ["control"]}]},
+        {from: { key_code: "y" }, to: [{ key_code: "return_or_enter" }, TMUX_PREFIX, {key_code: "m", modifiers: ["control"]}]},
       ].iterm2_vk1.basic,
     },
     {
