@@ -54,9 +54,25 @@ class Array
     map! { |h| {conditions: [Conditions::ON_ITERM2, Conditions::WITH_VK1]}.merge!(h) }
   end
 
+  def iterm2_vk4
+    map! { |h| {conditions: [Conditions::ON_ITERM2, Conditions::WITH_VK4]}.merge!(h) }
+  end
+
   def vscode_vk4
     map! { |h| {conditions: [Conditions::ON_VSCODE, Conditions::WITH_VK4]}.merge!(h) }
   end
+end
+
+def rule_for_iterm2_vk4(key_code)
+  {
+    description: "[VSCODE][VK4] #{key_code} -> control+t #{key_code}",
+    manipulators: [
+      {
+        from: { key_code: key_code },
+        to: [{key_code: "t", modifiers: ["control"]}, {key_code: key_code, modifiers: ["control"]}],
+      },
+    ].iterm2_vk4.basic,
+  }
 end
 
 def rule_for_vscode(key_code, command_name)
@@ -117,6 +133,14 @@ puts ({
         }
       end.basic,
     },
+    rule_for_iterm2_vk4("c"),
+    rule_for_iterm2_vk4("v"),
+    rule_for_iterm2_vk4("h"),
+    rule_for_iterm2_vk4("j"),
+    rule_for_iterm2_vk4("k"),
+    rule_for_iterm2_vk4("l"),
+    rule_for_iterm2_vk4("n"),
+    rule_for_iterm2_vk4("p"),
     rule_for_vscode("1", "workbench.action.openSettingsJson"),
     rule_for_vscode("2", "workbench.action.openGlobalKeybindingsFile"),
     rule_for_vscode("3", "workbench.action.openGlobalKeybindings"),
