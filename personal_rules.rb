@@ -282,6 +282,7 @@ puts ({
       manipulators: [
         {from: { key_code: "open_bracket" }, to: [{mouse_key: {vertical_wheel: -64}}]},
         {from: { key_code: "non_us_pound" }, to: [{ mouse_key: { vertical_wheel: 64 } }]},
+        {from: { key_code: "backslash" }, to: [{ mouse_key: { vertical_wheel: 64 } }]},
       ].vk1.basic,
     },
     {
