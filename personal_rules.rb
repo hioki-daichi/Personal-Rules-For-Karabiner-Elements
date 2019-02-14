@@ -236,7 +236,7 @@ puts ({
       manipulators: [
         {from: { key_code: "y" }, to: [{key_code: "c", modifiers: ["command"]}]},
         {from: { key_code: "t" }, to: [{key_code: "x", modifiers: ["command"]}]},
-        {from: { key_code: "x" }, to: [{key_code: "v", modifiers: ["command", "shift"]}]},
+        {from: { key_code: "x" }, to: [{key_code: "v", modifiers: ["command", "shift", "option"]}]},
       ].vk1.basic,
     },
     {

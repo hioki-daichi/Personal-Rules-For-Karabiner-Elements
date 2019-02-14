@@ -1743,7 +1743,8 @@
               "key_code": "v",
               "modifiers": [
                 "command",
-                "shift"
+                "shift",
+                "option"
               ]
             }
           ]
