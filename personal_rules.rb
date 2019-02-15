@@ -486,5 +486,11 @@ puts ({
         {from: {key_code: "colon", modifiers: {mandatory: ["control"]}}, to: [{key_code: "7", modifiers: ["shift"]}]},
       ].basic,
     },
+    {
+      description: "caps_lock -> vk_none",
+      manipulators: [
+        {from: {key_code: "caps_lock", modifiers: {optional: ["any"]}}, to: [{ key_code: "vk_none" }]},
+      ].basic,
+    },
   ],
 }).to_json

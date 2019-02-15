@@ -3343,6 +3343,27 @@
           ]
         }
       ]
+    },
+    {
+      "description": "caps_lock -> vk_none",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "caps_lock",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "vk_none"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
