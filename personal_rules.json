@@ -7,7 +7,12 @@
         {
           "type": "basic",
           "from": {
-            "key_code": "lang1"
+            "key_code": "lang1",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
           },
           "to": [
             {
@@ -34,7 +39,12 @@
         {
           "type": "basic",
           "from": {
-            "key_code": "international4"
+            "key_code": "international4",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
           },
           "to": [
             {
@@ -66,7 +76,12 @@
         {
           "type": "basic",
           "from": {
-            "key_code": "lang2"
+            "key_code": "lang2",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
           },
           "to": [
             {
@@ -93,7 +108,12 @@
         {
           "type": "basic",
           "from": {
-            "key_code": "international5"
+            "key_code": "international5",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
           },
           "to": [
             {
@@ -125,7 +145,12 @@
         {
           "type": "basic",
           "from": {
-            "key_code": "right_gui"
+            "key_code": "right_gui",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
           },
           "to": [
             {
@@ -147,7 +172,12 @@
         {
           "type": "basic",
           "from": {
-            "key_code": "international2"
+            "key_code": "international2",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
           },
           "to": [
             {
@@ -174,7 +204,12 @@
         {
           "type": "basic",
           "from": {
-            "key_code": "tab"
+            "key_code": "tab",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
           },
           "to": [
             {

@@ -96,7 +96,7 @@ puts ({
       description: "lang1/international4 -> VK1",
       manipulators: ["lang1", "international4"].map! do |key_code|
         {
-          from: { key_code: key_code },
+          from: {key_code: key_code, modifiers: {optional: ["any"]}},
           to: [{set_variable: {name: VirtualKeys::VK1, value: Values::ON}}],
           to_after_key_up: [{set_variable: {name: VirtualKeys::VK1, value: Values::OFF}}],
           to_if_alone: [{ key_code: "japanese_kana" }],
@@ -107,7 +107,7 @@ puts ({
       description: "lang2/international5 -> VK2",
       manipulators: ["lang2", "international5"].map! do |key_code|
         {
-          from: { key_code: key_code },
+          from: {key_code: key_code, modifiers: {optional: ["any"]}},
           to: [{set_variable: {name: VirtualKeys::VK2, value: Values::ON}}],
           to_after_key_up: [{set_variable: {name: VirtualKeys::VK2, value: Values::OFF}}],
           to_if_alone: [{ key_code: "japanese_eisuu" }],
@@ -118,7 +118,7 @@ puts ({
       description: "right_gui/international2 -> VK3",
       manipulators: ["right_gui", "international2"].map! do |key_code|
         {
-          from: { key_code: key_code },
+          from: {key_code: key_code, modifiers: {optional: ["any"]}},
           to: [{set_variable: {name: VirtualKeys::VK3, value: Values::ON}}],
           to_after_key_up: [{set_variable: {name: VirtualKeys::VK3, value: Values::OFF}}],
         }
@@ -128,7 +128,7 @@ puts ({
       description: "tab -> VK4",
       manipulators: ["tab"].map! do |key_code|
         {
-          from: { key_code: key_code },
+          from: {key_code: key_code, modifiers: {optional: ["any"]}},
           to: [{set_variable: {name: VirtualKeys::VK4, value: Values::ON}}],
           to_after_key_up: [{set_variable: {name: VirtualKeys::VK4, value: Values::OFF}}],
           to_if_alone: [{ key_code: key_code }],
