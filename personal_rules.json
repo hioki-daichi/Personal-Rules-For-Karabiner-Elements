@@ -2065,7 +2065,7 @@
       ]
     },
     {
-      "description": "[VK1] / -> mouse click",
+      "description": "[VK1] / -> left click, _ -> right click",
       "manipulators": [
         {
           "type": "basic",
@@ -2087,6 +2087,29 @@
           "to": [
             {
               "pointing_button": "button1"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "vk1",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "international1",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "pointing_button": "button2"
             }
           ]
         }

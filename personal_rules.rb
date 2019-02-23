@@ -272,9 +272,10 @@ puts ({
       ].vk1.basic,
     },
     {
-      description: "[VK1] / -> mouse click",
+      description: "[VK1] / -> left click, _ -> right click",
       manipulators: [
         {from: {key_code: "slash", modifiers: {optional: ["any"]}}, to: [{ pointing_button: "button1" }]},
+        {from: {key_code: "international1", modifiers: {optional: ["any"]}}, to: [{ pointing_button: "button2" }]},
       ].vk1.basic,
     },
     {
