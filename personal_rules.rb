@@ -316,11 +316,9 @@ puts ({
       ].vk1.basic,
     },
     {
-      description: "[VK2] f/d/s/a -> command+tab/command+shift+tab",
+      description: "[VK2] f/a -> command+tab/command+shift+tab",
       manipulators: [
         {from: { key_code: "f" }, to: [{key_code: "tab", modifiers: ["command"]}]},
-        {from: { key_code: "d" }, to: [{key_code: "tab", modifiers: ["command"]}]},
-        {from: { key_code: "s" }, to: [{key_code: "tab", modifiers: ["command", "shift"]}]},
         {from: { key_code: "a" }, to: [{key_code: "tab", modifiers: ["command", "shift"]}]},
       ].vk2.basic,
     },
@@ -454,6 +452,15 @@ puts ({
         {
           from: { key_code: "r" },
           to: [{ shell_command: "open -a 'Notes.app'" }],
+        },
+      ].vk2.basic,
+    },
+    {
+      description: "[VK2] d -> GoLand.app",
+      manipulators: [
+        {
+          from: { key_code: "d" },
+          to: [{ shell_command: "open -a 'GoLand.app'" }],
         },
       ].vk2.basic,
     },

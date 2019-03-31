@@ -2456,7 +2456,7 @@
       ]
     },
     {
-      "description": "[VK2] f/d/s/a -> command+tab/command+shift+tab",
+      "description": "[VK2] f/a -> command+tab/command+shift+tab",
       "manipulators": [
         {
           "type": "basic",
@@ -2475,49 +2475,6 @@
               "key_code": "tab",
               "modifiers": [
                 "command"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "vk2",
-              "value": 1
-            }
-          ],
-          "from": {
-            "key_code": "d"
-          },
-          "to": [
-            {
-              "key_code": "tab",
-              "modifiers": [
-                "command"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "vk2",
-              "value": 1
-            }
-          ],
-          "from": {
-            "key_code": "s"
-          },
-          "to": [
-            {
-              "key_code": "tab",
-              "modifiers": [
-                "command",
-                "shift"
               ]
             }
           ]
@@ -3114,6 +3071,29 @@
           "to": [
             {
               "shell_command": "open -a 'Notes.app'"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "[VK2] d -> GoLand.app",
+      "manipulators": [
+        {
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "vk2",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "d"
+          },
+          "to": [
+            {
+              "shell_command": "open -a 'GoLand.app'"
             }
           ]
         }
