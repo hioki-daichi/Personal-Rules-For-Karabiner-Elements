@@ -3112,7 +3112,12 @@
             }
           ],
           "from": {
-            "key_code": "a"
+            "key_code": "a",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
           },
           "to": [
             {
@@ -3130,7 +3135,12 @@
             }
           ],
           "from": {
-            "key_code": "s"
+            "key_code": "s",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
           },
           "to": [
             {
@@ -3148,7 +3158,12 @@
             }
           ],
           "from": {
-            "key_code": "d"
+            "key_code": "d",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
           },
           "to": [
             {
@@ -3166,7 +3181,12 @@
             }
           ],
           "from": {
-            "key_code": "f"
+            "key_code": "f",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
           },
           "to": [
             {
@@ -3184,7 +3204,12 @@
             }
           ],
           "from": {
-            "key_code": "g"
+            "key_code": "g",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
           },
           "to": [
             {
@@ -3202,7 +3227,12 @@
             }
           ],
           "from": {
-            "key_code": "h"
+            "key_code": "h",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
           },
           "to": [
             {
@@ -3220,7 +3250,12 @@
             }
           ],
           "from": {
-            "key_code": "j"
+            "key_code": "j",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
           },
           "to": [
             {
@@ -3238,7 +3273,12 @@
             }
           ],
           "from": {
-            "key_code": "k"
+            "key_code": "k",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
           },
           "to": [
             {
@@ -3256,7 +3296,12 @@
             }
           ],
           "from": {
-            "key_code": "l"
+            "key_code": "l",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
           },
           "to": [
             {
@@ -3274,7 +3319,12 @@
             }
           ],
           "from": {
-            "key_code": "semicolon"
+            "key_code": "semicolon",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
           },
           "to": [
             {
@@ -3292,7 +3342,12 @@
             }
           ],
           "from": {
-            "key_code": "quote"
+            "key_code": "quote",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
           },
           "to": [
             {
