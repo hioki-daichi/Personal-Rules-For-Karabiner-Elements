@@ -249,7 +249,7 @@ puts ({
     {
       description: "[VK1] [ -> command+z",
       manipulators: [
-        {from: { key_code: "close_bracket" }, to: [{key_code: "z", modifiers: ["command"]}]},
+        {from: {key_code: "close_bracket", modifiers: {optional: ["any"]}}, to: [{key_code: "z", modifiers: ["command"]}]},
       ].vk1.basic,
     },
     {

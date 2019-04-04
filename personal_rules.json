@@ -1840,7 +1840,12 @@
             }
           ],
           "from": {
-            "key_code": "close_bracket"
+            "key_code": "close_bracket",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
           },
           "to": [
             {
