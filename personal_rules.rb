@@ -412,15 +412,6 @@ puts ({
       ].vk2.basic,
     },
     {
-      description: "[VK2] : -> Visual Studio Code.app",
-      manipulators: [
-        {
-          from: { key_code: "quote" },
-          to: [{ shell_command: "open -a 'Visual Studio Code.app'" }],
-        },
-      ].vk2.basic,
-    },
-    {
       description: "[VK2] t -> Things.app",
       manipulators: [
         {
@@ -453,6 +444,15 @@ puts ({
         {
           from: { key_code: "r" },
           to: [{ shell_command: "open -a 'Notes.app'" }],
+        },
+      ].vk2.basic,
+    },
+    {
+      description: "[VK2] : -> Visual Studio Code.app",
+      manipulators: [
+        {
+          from: { key_code: "quote" },
+          to: [{ shell_command: "open -a 'Visual Studio Code.app'" }],
         },
       ].vk2.basic,
     },
