@@ -3094,30 +3094,7 @@
       ]
     },
     {
-      "description": "[VK2] : -> Visual Studio Code.app",
-      "manipulators": [
-        {
-          "type": "basic",
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "vk2",
-              "value": 1
-            }
-          ],
-          "from": {
-            "key_code": "quote"
-          },
-          "to": [
-            {
-              "shell_command": "open -a 'Visual Studio Code.app'"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "description": "[VK2] d -> GoLand.app",
+      "description": "[VK2] d -> Visual Studio Code.app",
       "manipulators": [
         {
           "type": "basic",
@@ -3130,6 +3107,29 @@
           ],
           "from": {
             "key_code": "d"
+          },
+          "to": [
+            {
+              "shell_command": "open -a 'Visual Studio Code.app'"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "[VK2] : -> GoLand.app",
+      "manipulators": [
+        {
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "vk2",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "quote"
           },
           "to": [
             {

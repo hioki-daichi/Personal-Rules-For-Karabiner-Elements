@@ -448,19 +448,19 @@ puts ({
       ].vk2.basic,
     },
     {
-      description: "[VK2] : -> Visual Studio Code.app",
+      description: "[VK2] d -> Visual Studio Code.app",
       manipulators: [
         {
-          from: { key_code: "quote" },
+          from: { key_code: "d" },
           to: [{ shell_command: "open -a 'Visual Studio Code.app'" }],
         },
       ].vk2.basic,
     },
     {
-      description: "[VK2] d -> GoLand.app",
+      description: "[VK2] : -> GoLand.app",
       manipulators: [
         {
-          from: { key_code: "d" },
+          from: { key_code: "quote" },
           to: [{ shell_command: "open -a 'GoLand.app'" }],
         },
       ].vk2.basic,
