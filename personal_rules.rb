@@ -158,7 +158,7 @@ puts ({
     rule_for_vscode_vk4("c", "workbench.debug.action.toggleRepl"),
     rule_for_vscode_vk4("t", "workbench.action.terminal.focus"),
     rule_for_vscode_vk4("k", "workbench.action.quickOpen"),
-    rule_for_vscode_vk4("r", "code-runner.run"),
+    rule_for_vscode_vk4("r", "References: Find All References"),
     rule_for_vscode_vk4("x", "workbench.action.showCommands"),
     rule_for_vscode_vk4("i", "workbench.action.switchWindow"),
     rule_for_vscode_vk4("y", "copyFilePath"),
