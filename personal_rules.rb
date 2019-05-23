@@ -420,10 +420,10 @@ puts ({
       ].vk2.basic,
     },
     {
-      description: "[VK2] k -> iTerm.app",
+      description: "[VK2] c -> iTerm.app",
       manipulators: [
         {
-          from: { key_code: "k" },
+          from: { key_code: "c" },
           to: [{ shell_command: "open -a 'iTerm.app'" }],
         },
       ].vk2.basic,
@@ -519,10 +519,10 @@ puts ({
       ].vk2.basic,
     },
     {
-      description: "[VK2] c -> Alacritty.app",
+      description: "[VK2] k -> Alacritty.app",
       manipulators: [
         {
-          from: { key_code: "c" },
+          from: { key_code: "k" },
           to: [{ shell_command: "open -a 'Alacritty.app'" }],
         },
       ].vk2.basic,

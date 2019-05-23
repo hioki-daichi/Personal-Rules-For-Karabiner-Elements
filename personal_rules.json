@@ -3465,7 +3465,7 @@
       ]
     },
     {
-      "description": "[VK2] k -> iTerm.app",
+      "description": "[VK2] c -> iTerm.app",
       "manipulators": [
         {
           "type": "basic",
@@ -3477,7 +3477,7 @@
             }
           ],
           "from": {
-            "key_code": "k"
+            "key_code": "c"
           },
           "to": [
             {
@@ -3718,7 +3718,7 @@
       ]
     },
     {
-      "description": "[VK2] c -> Alacritty.app",
+      "description": "[VK2] k -> Alacritty.app",
       "manipulators": [
         {
           "type": "basic",
@@ -3730,7 +3730,7 @@
             }
           ],
           "from": {
-            "key_code": "c"
+            "key_code": "k"
           },
           "to": [
             {
