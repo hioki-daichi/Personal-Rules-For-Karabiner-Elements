@@ -468,6 +468,15 @@ puts ({
       ].vk2.basic,
     },
     {
+      description: "[VK2] c -> Alacritty.app",
+      manipulators: [
+        {
+          from: { key_code: "c" },
+          to: [{ shell_command: "open -a 'Alacritty.app'" }],
+        },
+      ].vk2.basic,
+    },
+    {
       description: "[VK3] a/s/d/f/g/h/j/k/l/;/: -> 1/2/3/4/5/6/7/8/9/0/-",
       manipulators: [
         {from: {key_code: "a", modifiers: {optional: ["any"]}}, to: [{ key_code: "1" }]},
