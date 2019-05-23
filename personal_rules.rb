@@ -178,6 +178,13 @@ puts ({
       ].iterm2_vk1.basic,
     },
     {
+      description: "[Alacritty] o/p -> control+t control+p / control+t control+n",
+      manipulators: [
+        {from: { key_code: "o" }, to: [TMUX_PREFIX, {key_code: "p", modifiers: ["control"]}]},
+        {from: { key_code: "p" }, to: [TMUX_PREFIX, {key_code: "n", modifiers: ["control"]}]},
+      ].alacritty_vk1.basic,
+    },
+    {
       description: "[iTerm2] z/y -> copy and paste",
       manipulators: [
         {from: { key_code: "z" }, to: [TMUX_PREFIX, {key_code: "close_bracket", modifiers: ["control"]}]},
@@ -197,6 +204,13 @@ puts ({
         {from: { key_code: "u" }, to: [{key_code: "0", modifiers: ["shift"]}]},
         {from: { key_code: "i" }, to: [{key_code: "4", modifiers: ["shift"]}]},
       ].iterm2_vk1.basic,
+    },
+    {
+      description: "[Alacritty] u/i -> shift+0 / shift+4",
+      manipulators: [
+        {from: { key_code: "u" }, to: [{key_code: "0", modifiers: ["shift"]}]},
+        {from: { key_code: "i" }, to: [{key_code: "4", modifiers: ["shift"]}]},
+      ].alacritty_vk1.basic,
     },
     {
       description: "[VK1] h/j/k/l -> cursor move",

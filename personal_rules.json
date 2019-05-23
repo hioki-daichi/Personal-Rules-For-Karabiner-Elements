@@ -1346,6 +1346,77 @@
       ]
     },
     {
+      "description": "[Alacritty] o/p -> control+t control+p / control+t control+n",
+      "manipulators": [
+        {
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "io.alacritty"
+              ]
+            },
+            {
+              "type": "variable_if",
+              "name": "vk1",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "o"
+          },
+          "to": [
+            {
+              "key_code": "t",
+              "modifiers": [
+                "control"
+              ]
+            },
+            {
+              "key_code": "p",
+              "modifiers": [
+                "control"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "io.alacritty"
+              ]
+            },
+            {
+              "type": "variable_if",
+              "name": "vk1",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "p"
+          },
+          "to": [
+            {
+              "key_code": "t",
+              "modifiers": [
+                "control"
+              ]
+            },
+            {
+              "key_code": "n",
+              "modifiers": [
+                "control"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "description": "[iTerm2] z/y -> copy and paste",
       "manipulators": [
         {
@@ -1530,6 +1601,65 @@
               "type": "frontmost_application_if",
               "bundle_identifiers": [
                 "com.googlecode.iterm2"
+              ]
+            },
+            {
+              "type": "variable_if",
+              "name": "vk1",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "i"
+          },
+          "to": [
+            {
+              "key_code": "4",
+              "modifiers": [
+                "shift"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "[Alacritty] u/i -> shift+0 / shift+4",
+      "manipulators": [
+        {
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "io.alacritty"
+              ]
+            },
+            {
+              "type": "variable_if",
+              "name": "vk1",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "u"
+          },
+          "to": [
+            {
+              "key_code": "0",
+              "modifiers": [
+                "shift"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "io.alacritty"
               ]
             },
             {
