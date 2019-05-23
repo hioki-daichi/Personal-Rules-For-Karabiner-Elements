@@ -66,6 +66,10 @@ class Array
     map! { |h| {conditions: [Conditions::ON_ALACRITTY, Conditions::WITH_VK1]}.merge!(h) }
   end
 
+  def alacritty_vk4
+    map! { |h| {conditions: [Conditions::ON_ALACRITTY, Conditions::WITH_VK4]}.merge!(h) }
+  end
+
   def vscode_vk4
     map! { |h| {conditions: [Conditions::ON_VSCODE, Conditions::WITH_VK4]}.merge!(h) }
   end
@@ -80,6 +84,18 @@ def rule_for_iterm2_vk4(key_code)
         to: [TMUX_PREFIX, {key_code: key_code, modifiers: ["control"]}],
       },
     ].iterm2_vk4.basic,
+  }
+end
+
+def rule_for_alacritty_vk4(key_code)
+  {
+    description: "[Alacritty][VK4] #{key_code} -> control+t #{key_code}",
+    manipulators: [
+      {
+        from: { key_code: key_code },
+        to: [TMUX_PREFIX, {key_code: key_code, modifiers: ["control"]}],
+      },
+    ].alacritty_vk4.basic,
   }
 end
 
@@ -149,6 +165,14 @@ puts ({
     rule_for_iterm2_vk4("l"),
     rule_for_iterm2_vk4("n"),
     rule_for_iterm2_vk4("p"),
+    rule_for_alacritty_vk4("c"),
+    rule_for_alacritty_vk4("v"),
+    rule_for_alacritty_vk4("h"),
+    rule_for_alacritty_vk4("j"),
+    rule_for_alacritty_vk4("k"),
+    rule_for_alacritty_vk4("l"),
+    rule_for_alacritty_vk4("n"),
+    rule_for_alacritty_vk4("p"),
     rule_for_vscode_vk4("1", "workbench.action.openSettingsJson"),
     rule_for_vscode_vk4("2", "workbench.action.openGlobalKeybindingsFile"),
     rule_for_vscode_vk4("3", "workbench.action.openGlobalKeybindings"),
