@@ -236,7 +236,7 @@
       ]
     },
     {
-      "description": "[VSCODE][VK4] c -> control+t c",
+      "description": "[iTerm2][VK4] c -> control+t c",
       "manipulators": [
         {
           "type": "basic",
@@ -274,7 +274,7 @@
       ]
     },
     {
-      "description": "[VSCODE][VK4] v -> control+t v",
+      "description": "[iTerm2][VK4] v -> control+t v",
       "manipulators": [
         {
           "type": "basic",
@@ -312,7 +312,7 @@
       ]
     },
     {
-      "description": "[VSCODE][VK4] h -> control+t h",
+      "description": "[iTerm2][VK4] h -> control+t h",
       "manipulators": [
         {
           "type": "basic",
@@ -350,7 +350,7 @@
       ]
     },
     {
-      "description": "[VSCODE][VK4] j -> control+t j",
+      "description": "[iTerm2][VK4] j -> control+t j",
       "manipulators": [
         {
           "type": "basic",
@@ -388,7 +388,7 @@
       ]
     },
     {
-      "description": "[VSCODE][VK4] k -> control+t k",
+      "description": "[iTerm2][VK4] k -> control+t k",
       "manipulators": [
         {
           "type": "basic",
@@ -426,7 +426,7 @@
       ]
     },
     {
-      "description": "[VSCODE][VK4] l -> control+t l",
+      "description": "[iTerm2][VK4] l -> control+t l",
       "manipulators": [
         {
           "type": "basic",
@@ -464,7 +464,7 @@
       ]
     },
     {
-      "description": "[VSCODE][VK4] n -> control+t n",
+      "description": "[iTerm2][VK4] n -> control+t n",
       "manipulators": [
         {
           "type": "basic",
@@ -502,7 +502,7 @@
       ]
     },
     {
-      "description": "[VSCODE][VK4] p -> control+t p",
+      "description": "[iTerm2][VK4] p -> control+t p",
       "manipulators": [
         {
           "type": "basic",

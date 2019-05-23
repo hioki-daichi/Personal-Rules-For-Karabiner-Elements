@@ -73,7 +73,7 @@ end
 
 def rule_for_iterm2_vk4(key_code)
   {
-    description: "[VSCODE][VK4] #{key_code} -> control+t #{key_code}",
+    description: "[iTerm2][VK4] #{key_code} -> control+t #{key_code}",
     manipulators: [
       {
         from: { key_code: key_code },
