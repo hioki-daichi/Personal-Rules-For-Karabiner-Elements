@@ -12,6 +12,7 @@ end
 module BundleIdentifiers
   ITERM2 = "com.googlecode.iterm2"
   VSCODE = "com.microsoft.VSCode"
+  ALACRITTY = "io.alacritty"
 end
 
 module Values
@@ -27,6 +28,7 @@ module Conditions
 
   ON_ITERM2 = {type: "frontmost_application_if", bundle_identifiers: [BundleIdentifiers::ITERM2]}
   ON_VSCODE = {type: "frontmost_application_if", bundle_identifiers: [BundleIdentifiers::VSCODE]}
+  ON_ALACRITTY = {type: "frontmost_application_if", bundle_identifiers: [BundleIdentifiers::ALACRITTY]}
 end
 
 TMUX_PREFIX = {key_code: "t", modifiers: ["control"]}
@@ -58,6 +60,10 @@ class Array
 
   def iterm2_vk4
     map! { |h| {conditions: [Conditions::ON_ITERM2, Conditions::WITH_VK4]}.merge!(h) }
+  end
+
+  def alacritty_vk1
+    map! { |h| {conditions: [Conditions::ON_ALACRITTY, Conditions::WITH_VK1]}.merge!(h) }
   end
 
   def vscode_vk4
@@ -177,6 +183,13 @@ puts ({
         {from: { key_code: "z" }, to: [TMUX_PREFIX, {key_code: "close_bracket", modifiers: ["control"]}]},
         {from: { key_code: "y" }, to: [{ key_code: "return_or_enter" }, TMUX_PREFIX, {key_code: "m", modifiers: ["control"]}]},
       ].iterm2_vk1.basic,
+    },
+    {
+      description: "[Alacritty] z/y -> copy and paste",
+      manipulators: [
+        {from: { key_code: "z" }, to: [TMUX_PREFIX, {key_code: "close_bracket", modifiers: ["control"]}]},
+        {from: { key_code: "y" }, to: [{ key_code: "return_or_enter" }, TMUX_PREFIX, {key_code: "m", modifiers: ["control"]}]},
+      ].alacritty_vk1.basic,
     },
     {
       description: "[iTerm2] u/i -> shift+0 / shift+4",
