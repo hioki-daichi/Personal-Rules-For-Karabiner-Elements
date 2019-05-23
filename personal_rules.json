@@ -1065,7 +1065,7 @@
       ]
     },
     {
-      "description": "[VSCODE][VK4] r -> code-runner.run",
+      "description": "[VSCODE][VK4] r -> References: Find All References",
       "manipulators": [
         {
           "type": "basic",
