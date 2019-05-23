@@ -13,3 +13,8 @@ karabiner://karabiner/assets/complex_modifications/import?url=https://raw.github
 1. Modify `personal_rules.rb`.
 1. Execute `./update.sh`.
     - At this time, `personal_rules.json` is updated.
+
+## Requirement
+
+- Ruby
+- jq
