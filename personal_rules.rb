@@ -429,20 +429,20 @@ puts ({
       ].vk2.basic,
     },
     {
-      description: "[VK2] l -> Alfred 3.app",
+      description: "[VK2] l -> Alfred 4.app",
       manipulators: [
         {
           from: { key_code: "l" },
-          to: [{ shell_command: "open -a 'Alfred 3.app'" }],
+          to: [{ shell_command: "open -a 'Alfred 4.app'" }],
         },
       ].vk2.basic,
     },
     {
-      description: "[VK2] e -> snip search by Alfred 3",
+      description: "[VK2] e -> snip search by Alfred 4",
       manipulators: [
         {
           from: { key_code: "e" },
-          to: [{ shell_command: %q!osascript -e "tell application \"Alfred 3\" to search \"snip \""! }],
+          to: [{ shell_command: %q!osascript -e "tell application \"Alfred 4\" to search \"snip \""! }],
         },
       ].vk2.basic,
     },

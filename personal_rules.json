@@ -3488,7 +3488,7 @@
       ]
     },
     {
-      "description": "[VK2] l -> Alfred 3.app",
+      "description": "[VK2] l -> Alfred 4.app",
       "manipulators": [
         {
           "type": "basic",
@@ -3504,14 +3504,14 @@
           },
           "to": [
             {
-              "shell_command": "open -a 'Alfred 3.app'"
+              "shell_command": "open -a 'Alfred 4.app'"
             }
           ]
         }
       ]
     },
     {
-      "description": "[VK2] e -> snip search by Alfred 3",
+      "description": "[VK2] e -> snip search by Alfred 4",
       "manipulators": [
         {
           "type": "basic",
@@ -3527,7 +3527,7 @@
           },
           "to": [
             {
-              "shell_command": "osascript -e \"tell application \\\"Alfred 3\\\" to search \\\"snip \\\"\""
+              "shell_command": "osascript -e \"tell application \\\"Alfred 4\\\" to search \\\"snip \\\"\""
             }
           ]
         }
