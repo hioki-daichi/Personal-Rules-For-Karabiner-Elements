@@ -248,7 +248,7 @@ puts ({
     {
       description: "[VK1] f -> escape",
       manipulators: [
-        {from: { key_code: "f" }, to: [{ key_code: "escape" }]},
+        {from: { key_code: "f", modifiers: {optional: ["any"]} }, to: [{ key_code: "escape" }]},
       ].vk1.basic,
     },
     {

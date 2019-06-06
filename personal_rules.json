@@ -2096,7 +2096,12 @@
             }
           ],
           "from": {
-            "key_code": "f"
+            "key_code": "f",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
           },
           "to": [
             {
