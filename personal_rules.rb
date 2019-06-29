@@ -377,6 +377,13 @@ puts ({
       ].vk2.basic,
     },
     {
+      description: "[VK2] d/s -> control+tab/control+shift+tab",
+      manipulators: [
+        {from: { key_code: "d" }, to: [{key_code: "tab", modifiers: ["control"]}]},
+        {from: { key_code: "s" }, to: [{key_code: "tab", modifiers: ["control", "shift"]}]},
+      ].vk2.basic,
+    },
+    {
       description: "[VK2] 9/0 -> command+shift+;/command+hyphen",
       manipulators: [
         {from: { key_code: "9" }, to: [{key_code: "semicolon", modifiers: ["command", "shift"]}]},
@@ -501,10 +508,10 @@ puts ({
       ].vk2.basic,
     },
     {
-      description: "[VK2] d -> Visual Studio Code.app",
+      description: "[VK2] v -> Visual Studio Code.app",
       manipulators: [
         {
-          from: { key_code: "d" },
+          from: { key_code: "v" },
           to: [{ shell_command: "open -a 'Visual Studio Code.app'" }],
         },
       ].vk2.basic,

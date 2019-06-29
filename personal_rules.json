@@ -3127,6 +3127,54 @@
       ]
     },
     {
+      "description": "[VK2] d/s -> control+tab/control+shift+tab",
+      "manipulators": [
+        {
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "vk2",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "d"
+          },
+          "to": [
+            {
+              "key_code": "tab",
+              "modifiers": [
+                "control"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "vk2",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "s"
+          },
+          "to": [
+            {
+              "key_code": "tab",
+              "modifiers": [
+                "control",
+                "shift"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "description": "[VK2] 9/0 -> command+shift+;/command+hyphen",
       "manipulators": [
         {
@@ -3677,7 +3725,7 @@
       ]
     },
     {
-      "description": "[VK2] d -> Visual Studio Code.app",
+      "description": "[VK2] v -> Visual Studio Code.app",
       "manipulators": [
         {
           "type": "basic",
@@ -3689,7 +3737,7 @@
             }
           ],
           "from": {
-            "key_code": "d"
+            "key_code": "v"
           },
           "to": [
             {
