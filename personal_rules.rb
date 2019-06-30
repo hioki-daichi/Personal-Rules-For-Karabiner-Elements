@@ -370,17 +370,17 @@ puts ({
       ].vk1.basic,
     },
     {
-      description: "[VK2] f/a -> command+tab/command+shift+tab",
+      description: "[VK2] f/d -> command+tab/command+shift+tab",
       manipulators: [
         {from: { key_code: "f" }, to: [{key_code: "tab", modifiers: ["command"]}]},
-        {from: { key_code: "a" }, to: [{key_code: "tab", modifiers: ["command", "shift"]}]},
+        {from: { key_code: "d" }, to: [{key_code: "tab", modifiers: ["command", "shift"]}]},
       ].vk2.basic,
     },
     {
-      description: "[VK2] d/s -> control+tab/control+shift+tab",
+      description: "[VK2] s/a -> control+tab/control+shift+tab",
       manipulators: [
-        {from: { key_code: "d" }, to: [{key_code: "tab", modifiers: ["control"]}]},
-        {from: { key_code: "s" }, to: [{key_code: "tab", modifiers: ["control", "shift"]}]},
+        {from: { key_code: "s" }, to: [{key_code: "tab", modifiers: ["control"]}]},
+        {from: { key_code: "a" }, to: [{key_code: "tab", modifiers: ["control", "shift"]}]},
       ].vk2.basic,
     },
     {

@@ -3079,7 +3079,7 @@
       ]
     },
     {
-      "description": "[VK2] f/a -> command+tab/command+shift+tab",
+      "description": "[VK2] f/d -> command+tab/command+shift+tab",
       "manipulators": [
         {
           "type": "basic",
@@ -3112,7 +3112,7 @@
             }
           ],
           "from": {
-            "key_code": "a"
+            "key_code": "d"
           },
           "to": [
             {
@@ -3127,7 +3127,7 @@
       ]
     },
     {
-      "description": "[VK2] d/s -> control+tab/control+shift+tab",
+      "description": "[VK2] s/a -> control+tab/control+shift+tab",
       "manipulators": [
         {
           "type": "basic",
@@ -3139,7 +3139,7 @@
             }
           ],
           "from": {
-            "key_code": "d"
+            "key_code": "s"
           },
           "to": [
             {
@@ -3160,7 +3160,7 @@
             }
           ],
           "from": {
-            "key_code": "s"
+            "key_code": "a"
           },
           "to": [
             {
