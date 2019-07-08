@@ -58,6 +58,10 @@ class Array
     map! { |h| {conditions: [Conditions::ON_ITERM2, Conditions::WITH_VK1]}.merge!(h) }
   end
 
+  def iterm2_vk2
+    map! { |h| {conditions: [Conditions::ON_ITERM2, Conditions::WITH_VK2]}.merge!(h) }
+  end
+
   def iterm2_vk4
     map! { |h| {conditions: [Conditions::ON_ITERM2, Conditions::WITH_VK4]}.merge!(h) }
   end
@@ -200,6 +204,13 @@ puts ({
         {from: { key_code: "o" }, to: [TMUX_PREFIX, {key_code: "p", modifiers: ["control"]}]},
         {from: { key_code: "p" }, to: [TMUX_PREFIX, {key_code: "n", modifiers: ["control"]}]},
       ].iterm2_vk1.basic,
+    },
+    {
+      description: "[iTerm2] VK2 + a/s -> control+t control+p / control+t control+n",
+      manipulators: [
+        {from: { key_code: "a" }, to: [TMUX_PREFIX, {key_code: "p", modifiers: ["control"]}]},
+        {from: { key_code: "s" }, to: [TMUX_PREFIX, {key_code: "n", modifiers: ["control"]}]},
+      ].iterm2_vk2.basic,
     },
     {
       description: "[Alacritty] o/p -> control+t control+p / control+t control+n",
