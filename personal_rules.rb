@@ -555,6 +555,23 @@ h = {
       ].vk2.basic
     },
     {
+      description: '[VK3] z.._ -> !..\\',
+      manipulators: [
+        { from: { key_code: 'z', modifiers: { optional: ['any'] } }, to: [{ key_code: '1', modifiers: ['shift'] }] },
+        { from: { key_code: 'x', modifiers: { optional: ['any'] } }, to: [{ key_code: '2', modifiers: ['shift'] }] },
+        { from: { key_code: 'c', modifiers: { optional: ['any'] } }, to: [{ key_code: '3', modifiers: ['shift'] }] },
+        { from: { key_code: 'v', modifiers: { optional: ['any'] } }, to: [{ key_code: '4', modifiers: ['shift'] }] },
+        { from: { key_code: 'b', modifiers: { optional: ['any'] } }, to: [{ key_code: '5', modifiers: ['shift'] }] },
+        { from: { key_code: 'n', modifiers: { optional: ['any'] } }, to: [{ key_code: '6', modifiers: ['shift'] }] },
+        { from: { key_code: 'm', modifiers: { optional: ['any'] } }, to: [{ key_code: '7', modifiers: ['shift'] }] },
+        { from: { key_code: 'comma', modifiers: { optional: ['any'] } }, to: [{ key_code: '8', modifiers: ['shift'] }] },
+        { from: { key_code: 'period', modifiers: { optional: ['any'] } }, to: [{ key_code: '9', modifiers: ['shift'] }] },
+        { from: { key_code: 'slash', modifiers: { optional: ['any'] } }, to: [{ key_code: 'hyphen', modifiers: ['shift'] }] },
+        { from: { key_code: 'international1', modifiers: { optional: ['any'] } }, to: [{ key_code: 'equal_sign', modifiers: ['shift'] }] },
+        { from: { key_code: 'up_arrow', modifiers: { optional: ['any'] } }, to: [{ key_code: 'international3', modifiers: ['shift'] }] }
+      ].vk3.basic
+    },
+    {
       description: '[VK3] a/s/d/f/g/h/j/k/l/;/: -> 1/2/3/4/5/6/7/8/9/0/-',
       manipulators: [
         { from: { key_code: 'a', modifiers: { optional: ['any'] } }, to: [{ key_code: '1' }] },
