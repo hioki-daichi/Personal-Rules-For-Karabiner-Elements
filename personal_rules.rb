@@ -572,7 +572,7 @@ h = {
       ].vk3.basic
     },
     {
-      description: '[VK3] a/s/d/f/g/h/j/k/l/;/: -> 1/2/3/4/5/6/7/8/9/0/-',
+      description: '[VK3] a..: -> 1..-',
       manipulators: [
         { from: { key_code: 'a', modifiers: { optional: ['any'] } }, to: [{ key_code: '1' }] },
         { from: { key_code: 's', modifiers: { optional: ['any'] } }, to: [{ key_code: '2' }] },
