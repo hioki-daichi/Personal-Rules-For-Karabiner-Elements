@@ -1,0 +1,5 @@
+LineLength:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
