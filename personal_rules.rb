@@ -381,6 +381,12 @@ h = {
       ].vk1.basic,
     },
     {
+      description: '[VK1] \ -> command+option+d (Hide the Dock)',
+      manipulators: [
+        { from: { key_code: 'international3' }, to: [{ key_code: 'd', modifiers: ['command', 'option'] }] },
+      ].vk1.basic,
+    },
+    {
       description: '[VK2] f/d -> command+tab/command+shift+tab',
       manipulators: [
         { from: { key_code: 'f' }, to: [{ key_code: 'tab', modifiers: ['command'] }] },
