@@ -627,18 +627,18 @@ h = {
         { from: { key_code: 'caps_lock', modifiers: { optional: ['any'] } }, to: [{ key_code: 'vk_none' }] },
       ].basic,
     },
-    {
-      description: '(for php) left_arrow to ->',
-      manipulators: [
-        { from: { key_code: 'left_arrow' }, to: [{ key_code: 'hyphen' }, { key_code: 'period', modifiers: ['shift'] }] },
-      ].basic,
-    },
-    {
-      description: '(for php) down_arrow to ()',
-      manipulators: [
-        { from: { key_code: 'down_arrow' }, to: [{ key_code: '8', modifiers: ['shift'] }, { key_code: '9', modifiers: ['shift'] }] },
-      ].basic,
-    },
+    # {
+    #   description: '(for php) left_arrow to ->',
+    #   manipulators: [
+    #     { from: { key_code: 'left_arrow' }, to: [{ key_code: 'hyphen' }, { key_code: 'period', modifiers: ['shift'] }] },
+    #   ].basic,
+    # },
+    # {
+    #   description: '(for php) down_arrow to ()',
+    #   manipulators: [
+    #     { from: { key_code: 'down_arrow' }, to: [{ key_code: '8', modifiers: ['shift'] }, { key_code: '9', modifiers: ['shift'] }] },
+    #   ].basic,
+    # },
   ],
 }
 puts h.to_json
