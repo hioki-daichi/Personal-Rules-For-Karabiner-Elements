@@ -594,17 +594,11 @@ h = {
       ].vk3.basic,
     },
     {
-      description: '[VK3] z/x -> {/}',
+      description: '[VK3] x/c/v -> {/(/"',
       manipulators: [
-        { from: { key_code: 'z' }, to: [{ key_code: 'close_bracket', modifiers: ['shift'] }] },
-        { from: { key_code: 'x' }, to: [{ key_code: 'non_us_pound', modifiers: ['shift'] }] },
-      ].vk3.basic,
-    },
-    {
-      description: '[VK3] c/v -> [/]',
-      manipulators: [
-        { from: { key_code: 'c' }, to: [{ key_code: 'close_bracket' }] },
-        { from: { key_code: 'v' }, to: [{ key_code: 'non_us_pound' }] },
+        { from: { key_code: 'x' }, to: [{ key_code: 'close_bracket', modifiers: ['shift'] }] },
+        { from: { key_code: 'c' }, to: [{ key_code: '8', modifiers: ['shift'] }] },
+        { from: { key_code: 'v' }, to: [{ key_code: '2', modifiers: ['shift'] }] },
       ].vk3.basic,
     },
     {
