@@ -621,12 +621,6 @@ h = {
         { from: { key_code: 'caps_lock', modifiers: { optional: ['any'] } }, to: [{ key_code: 'vk_none' }] },
       ].basic,
     },
-    {
-      description: 'left_arrow to ;',
-      manipulators: [
-        { from: { key_code: 'left_arrow' }, to: [{ key_code: 'semicolon' }] },
-      ].basic,
-    },
   ],
 }
 puts h.to_json

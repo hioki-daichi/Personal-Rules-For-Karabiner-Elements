@@ -4597,22 +4597,6 @@
           ]
         }
       ]
-    },
-    {
-      "description": "left_arrow to ;",
-      "manipulators": [
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "left_arrow"
-          },
-          "to": [
-            {
-              "key_code": "semicolon"
-            }
-          ]
-        }
-      ]
     }
   ]
 }
