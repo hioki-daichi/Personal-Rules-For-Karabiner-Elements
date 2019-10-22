@@ -10,7 +10,7 @@ module VirtualKeys
 end
 
 module BundleIdentifiers
-  TERMINAL = 'com.apple.terminal'
+  TERMINAL = 'com.googlecode.iterm2'
   VSCODE = 'com.microsoft.VSCode'
   ALACRITTY = 'io.alacritty'
 end
@@ -444,11 +444,11 @@ h = {
       ].vk2.basic,
     },
     {
-      description: '[VK2] k -> Terminal.app',
+      description: '[VK2] k -> iTerm.app',
       manipulators: [
         {
           from: { key_code: 'k' },
-          to: [{ shell_command: "open -a 'Terminal.app'" }],
+          to: [{ shell_command: "open -a 'iTerm.app'" }],
         },
       ].vk2.basic,
     },

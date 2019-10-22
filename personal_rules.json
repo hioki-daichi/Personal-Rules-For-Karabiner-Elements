@@ -244,7 +244,7 @@
             {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
-                "com.apple.terminal"
+                "com.googlecode.iterm2"
               ]
             },
             {
@@ -282,7 +282,7 @@
             {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
-                "com.apple.terminal"
+                "com.googlecode.iterm2"
               ]
             },
             {
@@ -320,7 +320,7 @@
             {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
-                "com.apple.terminal"
+                "com.googlecode.iterm2"
               ]
             },
             {
@@ -358,7 +358,7 @@
             {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
-                "com.apple.terminal"
+                "com.googlecode.iterm2"
               ]
             },
             {
@@ -396,7 +396,7 @@
             {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
-                "com.apple.terminal"
+                "com.googlecode.iterm2"
               ]
             },
             {
@@ -434,7 +434,7 @@
             {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
-                "com.apple.terminal"
+                "com.googlecode.iterm2"
               ]
             },
             {
@@ -472,7 +472,7 @@
             {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
-                "com.apple.terminal"
+                "com.googlecode.iterm2"
               ]
             },
             {
@@ -510,7 +510,7 @@
             {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
-                "com.apple.terminal"
+                "com.googlecode.iterm2"
               ]
             },
             {
@@ -1587,7 +1587,7 @@
             {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
-                "com.apple.terminal"
+                "com.googlecode.iterm2"
               ]
             },
             {
@@ -1620,7 +1620,7 @@
             {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
-                "com.apple.terminal"
+                "com.googlecode.iterm2"
               ]
             },
             {
@@ -1658,7 +1658,7 @@
             {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
-                "com.apple.terminal"
+                "com.googlecode.iterm2"
               ]
             },
             {
@@ -1691,7 +1691,7 @@
             {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
-                "com.apple.terminal"
+                "com.googlecode.iterm2"
               ]
             },
             {
@@ -1800,7 +1800,7 @@
             {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
-                "com.apple.terminal"
+                "com.googlecode.iterm2"
               ]
             },
             {
@@ -1833,7 +1833,7 @@
             {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
-                "com.apple.terminal"
+                "com.googlecode.iterm2"
               ]
             },
             {
@@ -1948,7 +1948,7 @@
             {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
-                "com.apple.terminal"
+                "com.googlecode.iterm2"
               ]
             },
             {
@@ -1975,7 +1975,7 @@
             {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
-                "com.apple.terminal"
+                "com.googlecode.iterm2"
               ]
             },
             {
@@ -3615,7 +3615,7 @@
       ]
     },
     {
-      "description": "[VK2] k -> Terminal.app",
+      "description": "[VK2] k -> iTerm.app",
       "manipulators": [
         {
           "type": "basic",
@@ -3631,7 +3631,7 @@
           },
           "to": [
             {
-              "shell_command": "open -a 'Terminal.app'"
+              "shell_command": "open -a 'iTerm.app'"
             }
           ]
         }
