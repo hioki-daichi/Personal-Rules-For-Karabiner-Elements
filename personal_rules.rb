@@ -10,7 +10,7 @@ module VirtualKeys
 end
 
 module BundleIdentifiers
-  ITERM2 = 'com.googlecode.iterm2'
+  TERMINAL = 'com.apple.terminal'
   VSCODE = 'com.microsoft.VSCode'
   ALACRITTY = 'io.alacritty'
 end
@@ -26,7 +26,7 @@ module Conditions
   WITH_VK3 = { type: 'variable_if', name: VirtualKeys::VK3, value: Values::ON }.freeze
   WITH_VK4 = { type: 'variable_if', name: VirtualKeys::VK4, value: Values::ON }.freeze
 
-  ON_ITERM2 = { type: 'frontmost_application_if', bundle_identifiers: [BundleIdentifiers::ITERM2] }.freeze
+  ON_TERMINAL = { type: 'frontmost_application_if', bundle_identifiers: [BundleIdentifiers::TERMINAL] }.freeze
   ON_VSCODE = { type: 'frontmost_application_if', bundle_identifiers: [BundleIdentifiers::VSCODE] }.freeze
   ON_ALACRITTY = { type: 'frontmost_application_if', bundle_identifiers: [BundleIdentifiers::ALACRITTY] }.freeze
 end
@@ -54,16 +54,16 @@ class Array
     map! { |h| { conditions: [Conditions::WITH_VK4] }.merge!(h) }
   end
 
-  def iterm2_vk1
-    map! { |h| { conditions: [Conditions::ON_ITERM2, Conditions::WITH_VK1] }.merge!(h) }
+  def terminal_vk1
+    map! { |h| { conditions: [Conditions::ON_TERMINAL, Conditions::WITH_VK1] }.merge!(h) }
   end
 
-  def iterm2_vk2
-    map! { |h| { conditions: [Conditions::ON_ITERM2, Conditions::WITH_VK2] }.merge!(h) }
+  def terminal_vk2
+    map! { |h| { conditions: [Conditions::ON_TERMINAL, Conditions::WITH_VK2] }.merge!(h) }
   end
 
-  def iterm2_vk4
-    map! { |h| { conditions: [Conditions::ON_ITERM2, Conditions::WITH_VK4] }.merge!(h) }
+  def terminal_vk4
+    map! { |h| { conditions: [Conditions::ON_TERMINAL, Conditions::WITH_VK4] }.merge!(h) }
   end
 
   def alacritty_vk1
@@ -79,15 +79,15 @@ class Array
   end
 end
 
-def rule_for_iterm2_vk4(key_code)
+def rule_for_terminal_vk4(key_code)
   {
-    description: "[iTerm2][VK4] #{key_code} -> control+t #{key_code}",
+    description: "[Terminal][VK4] #{key_code} -> control+t #{key_code}",
     manipulators: [
       {
         from: { key_code: key_code },
         to: [TMUX_PREFIX, { key_code: key_code, modifiers: ['control'] }],
       },
-    ].iterm2_vk4.basic,
+    ].terminal_vk4.basic,
   }
 end
 
@@ -161,14 +161,14 @@ h = {
         }
       end.basic,
     },
-    rule_for_iterm2_vk4('c'),
-    rule_for_iterm2_vk4('v'),
-    rule_for_iterm2_vk4('h'),
-    rule_for_iterm2_vk4('j'),
-    rule_for_iterm2_vk4('k'),
-    rule_for_iterm2_vk4('l'),
-    rule_for_iterm2_vk4('n'),
-    rule_for_iterm2_vk4('p'),
+    rule_for_terminal_vk4('c'),
+    rule_for_terminal_vk4('v'),
+    rule_for_terminal_vk4('h'),
+    rule_for_terminal_vk4('j'),
+    rule_for_terminal_vk4('k'),
+    rule_for_terminal_vk4('l'),
+    rule_for_terminal_vk4('n'),
+    rule_for_terminal_vk4('p'),
     rule_for_alacritty_vk4('c'),
     rule_for_alacritty_vk4('v'),
     rule_for_alacritty_vk4('h'),
@@ -199,18 +199,18 @@ h = {
     rule_for_vscode_vk4('close_bracket', 'workbench.action.moveEditorLeftInGroup'),
     rule_for_vscode_vk4('non_us_pound', 'workbench.action.moveEditorRightInGroup'),
     {
-      description: '[iTerm2] o/p -> control+t control+p / control+t control+n',
+      description: '[Terminal] o/p -> control+t control+p / control+t control+n',
       manipulators: [
         { from: { key_code: 'o' }, to: [TMUX_PREFIX, { key_code: 'p', modifiers: ['control'] }] },
         { from: { key_code: 'p' }, to: [TMUX_PREFIX, { key_code: 'n', modifiers: ['control'] }] },
-      ].iterm2_vk1.basic,
+      ].terminal_vk1.basic,
     },
     {
-      description: '[iTerm2] VK2 + a/s -> control+t control+p / control+t control+n',
+      description: '[Terminal] VK2 + a/s -> control+t control+p / control+t control+n',
       manipulators: [
         { from: { key_code: 'a' }, to: [TMUX_PREFIX, { key_code: 'p', modifiers: ['control'] }] },
         { from: { key_code: 's' }, to: [TMUX_PREFIX, { key_code: 'n', modifiers: ['control'] }] },
-      ].iterm2_vk2.basic,
+      ].terminal_vk2.basic,
     },
     {
       description: '[Alacritty] o/p -> control+t control+p / control+t control+n',
@@ -220,11 +220,11 @@ h = {
       ].alacritty_vk1.basic,
     },
     {
-      description: '[iTerm2] z/y -> copy and paste',
+      description: '[Terminal] z/y -> copy and paste',
       manipulators: [
         { from: { key_code: 'z' }, to: [TMUX_PREFIX, { key_code: 'close_bracket', modifiers: ['control'] }] },
         { from: { key_code: 'y' }, to: [{ key_code: 'return_or_enter' }, TMUX_PREFIX, { key_code: 'm', modifiers: ['control'] }] },
-      ].iterm2_vk1.basic,
+      ].terminal_vk1.basic,
     },
     {
       description: '[Alacritty] z/y -> copy and paste',
@@ -234,11 +234,11 @@ h = {
       ].alacritty_vk1.basic,
     },
     {
-      description: '[iTerm2] u/i -> shift+0 / shift+4',
+      description: '[Terminal] u/i -> shift+0 / shift+4',
       manipulators: [
         { from: { key_code: 'u' }, to: [{ key_code: '0', modifiers: ['shift'] }] },
         { from: { key_code: 'i' }, to: [{ key_code: '4', modifiers: ['shift'] }] },
-      ].iterm2_vk1.basic,
+      ].terminal_vk1.basic,
     },
     {
       description: '[Alacritty] u/i -> shift+0 / shift+4',
@@ -444,11 +444,11 @@ h = {
       ].vk2.basic,
     },
     {
-      description: '[VK2] k -> iTerm.app',
+      description: '[VK2] k -> Terminal.app',
       manipulators: [
         {
           from: { key_code: 'k' },
-          to: [{ shell_command: "open -a 'iTerm.app'" }],
+          to: [{ shell_command: "open -a 'Terminal.app'" }],
         },
       ].vk2.basic,
     },

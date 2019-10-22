@@ -236,7 +236,7 @@
       ]
     },
     {
-      "description": "[iTerm2][VK4] c -> control+t c",
+      "description": "[Terminal][VK4] c -> control+t c",
       "manipulators": [
         {
           "type": "basic",
@@ -244,7 +244,7 @@
             {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
-                "com.googlecode.iterm2"
+                "com.apple.terminal"
               ]
             },
             {
@@ -274,7 +274,7 @@
       ]
     },
     {
-      "description": "[iTerm2][VK4] v -> control+t v",
+      "description": "[Terminal][VK4] v -> control+t v",
       "manipulators": [
         {
           "type": "basic",
@@ -282,7 +282,7 @@
             {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
-                "com.googlecode.iterm2"
+                "com.apple.terminal"
               ]
             },
             {
@@ -312,7 +312,7 @@
       ]
     },
     {
-      "description": "[iTerm2][VK4] h -> control+t h",
+      "description": "[Terminal][VK4] h -> control+t h",
       "manipulators": [
         {
           "type": "basic",
@@ -320,7 +320,7 @@
             {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
-                "com.googlecode.iterm2"
+                "com.apple.terminal"
               ]
             },
             {
@@ -350,7 +350,7 @@
       ]
     },
     {
-      "description": "[iTerm2][VK4] j -> control+t j",
+      "description": "[Terminal][VK4] j -> control+t j",
       "manipulators": [
         {
           "type": "basic",
@@ -358,7 +358,7 @@
             {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
-                "com.googlecode.iterm2"
+                "com.apple.terminal"
               ]
             },
             {
@@ -388,7 +388,7 @@
       ]
     },
     {
-      "description": "[iTerm2][VK4] k -> control+t k",
+      "description": "[Terminal][VK4] k -> control+t k",
       "manipulators": [
         {
           "type": "basic",
@@ -396,7 +396,7 @@
             {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
-                "com.googlecode.iterm2"
+                "com.apple.terminal"
               ]
             },
             {
@@ -426,7 +426,7 @@
       ]
     },
     {
-      "description": "[iTerm2][VK4] l -> control+t l",
+      "description": "[Terminal][VK4] l -> control+t l",
       "manipulators": [
         {
           "type": "basic",
@@ -434,7 +434,7 @@
             {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
-                "com.googlecode.iterm2"
+                "com.apple.terminal"
               ]
             },
             {
@@ -464,7 +464,7 @@
       ]
     },
     {
-      "description": "[iTerm2][VK4] n -> control+t n",
+      "description": "[Terminal][VK4] n -> control+t n",
       "manipulators": [
         {
           "type": "basic",
@@ -472,7 +472,7 @@
             {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
-                "com.googlecode.iterm2"
+                "com.apple.terminal"
               ]
             },
             {
@@ -502,7 +502,7 @@
       ]
     },
     {
-      "description": "[iTerm2][VK4] p -> control+t p",
+      "description": "[Terminal][VK4] p -> control+t p",
       "manipulators": [
         {
           "type": "basic",
@@ -510,7 +510,7 @@
             {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
-                "com.googlecode.iterm2"
+                "com.apple.terminal"
               ]
             },
             {
@@ -1579,7 +1579,7 @@
       ]
     },
     {
-      "description": "[iTerm2] o/p -> control+t control+p / control+t control+n",
+      "description": "[Terminal] o/p -> control+t control+p / control+t control+n",
       "manipulators": [
         {
           "type": "basic",
@@ -1587,7 +1587,7 @@
             {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
-                "com.googlecode.iterm2"
+                "com.apple.terminal"
               ]
             },
             {
@@ -1620,7 +1620,7 @@
             {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
-                "com.googlecode.iterm2"
+                "com.apple.terminal"
               ]
             },
             {
@@ -1650,7 +1650,7 @@
       ]
     },
     {
-      "description": "[iTerm2] VK2 + a/s -> control+t control+p / control+t control+n",
+      "description": "[Terminal] VK2 + a/s -> control+t control+p / control+t control+n",
       "manipulators": [
         {
           "type": "basic",
@@ -1658,7 +1658,7 @@
             {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
-                "com.googlecode.iterm2"
+                "com.apple.terminal"
               ]
             },
             {
@@ -1691,7 +1691,7 @@
             {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
-                "com.googlecode.iterm2"
+                "com.apple.terminal"
               ]
             },
             {
@@ -1792,7 +1792,7 @@
       ]
     },
     {
-      "description": "[iTerm2] z/y -> copy and paste",
+      "description": "[Terminal] z/y -> copy and paste",
       "manipulators": [
         {
           "type": "basic",
@@ -1800,7 +1800,7 @@
             {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
-                "com.googlecode.iterm2"
+                "com.apple.terminal"
               ]
             },
             {
@@ -1833,7 +1833,7 @@
             {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
-                "com.googlecode.iterm2"
+                "com.apple.terminal"
               ]
             },
             {
@@ -1940,7 +1940,7 @@
       ]
     },
     {
-      "description": "[iTerm2] u/i -> shift+0 / shift+4",
+      "description": "[Terminal] u/i -> shift+0 / shift+4",
       "manipulators": [
         {
           "type": "basic",
@@ -1948,7 +1948,7 @@
             {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
-                "com.googlecode.iterm2"
+                "com.apple.terminal"
               ]
             },
             {
@@ -1975,7 +1975,7 @@
             {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
-                "com.googlecode.iterm2"
+                "com.apple.terminal"
               ]
             },
             {
@@ -3615,7 +3615,7 @@
       ]
     },
     {
-      "description": "[VK2] k -> iTerm.app",
+      "description": "[VK2] k -> Terminal.app",
       "manipulators": [
         {
           "type": "basic",
@@ -3631,7 +3631,7 @@
           },
           "to": [
             {
-              "shell_command": "open -a 'iTerm.app'"
+              "shell_command": "open -a 'Terminal.app'"
             }
           ]
         }
