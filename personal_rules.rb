@@ -612,7 +612,7 @@ h = {
     {
       description: "control+: -> '",
       manipulators: [
-        { from: { key_code: 'colon', modifiers: { mandatory: ['control'] } }, to: [{ key_code: '7', modifiers: ['shift'] }] },
+        { from: { key_code: 'quote', modifiers: { mandatory: ['control'] } }, to: [{ key_code: '7', modifiers: ['shift'] }] },
       ].basic,
     },
     {
