@@ -190,7 +190,7 @@ h = {
     rule_for_vscode_vk4('p', 'workbench.action.problems.focus'),
     rule_for_vscode_vk4('o', 'workbench.action.output.toggleOutput'),
     rule_for_vscode_vk4('c', 'workbench.debug.action.toggleRepl'),
-    rule_for_vscode_vk4('t', 'workbench.action.terminal.focus'),
+    rule_for_vscode_vk4('m', 'workbench.action.terminal.focus'),
     rule_for_vscode_vk4('k', 'workbench.action.quickOpen'),
     rule_for_vscode_vk4('r', 'References: Find All References'),
     rule_for_vscode_vk4('x', 'workbench.action.showCommands'),

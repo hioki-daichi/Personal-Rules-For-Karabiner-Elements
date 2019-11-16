@@ -1299,7 +1299,7 @@
       ]
     },
     {
-      "description": "[VSCODE][VK4] t -> workbench.action.terminal.focus",
+      "description": "[VSCODE][VK4] m -> workbench.action.terminal.focus",
       "manipulators": [
         {
           "type": "basic",
@@ -1317,11 +1317,11 @@
             }
           ],
           "from": {
-            "key_code": "t"
+            "key_code": "m"
           },
           "to": [
             {
-              "key_code": "t",
+              "key_code": "m",
               "modifiers": [
                 "control",
                 "shift",
