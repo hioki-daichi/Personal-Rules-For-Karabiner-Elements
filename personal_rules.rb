@@ -489,11 +489,11 @@ h = {
       ].vk2.basic,
     },
     {
-      description: '[VK2] t -> Todoist.app',
+      description: '[VK2] t -> Microsoft To Do.app',
       manipulators: [
         {
           from: { key_code: 't' },
-          to: [{ shell_command: "open -a 'Todoist.app'" }],
+          to: [{ shell_command: "open -a 'Microsoft To Do.app'" }],
         },
       ].vk2.basic,
     },
