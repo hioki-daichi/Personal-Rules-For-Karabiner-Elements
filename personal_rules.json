@@ -3753,6 +3753,29 @@
       ]
     },
     {
+      "description": "[VK2] g -> Atom.app",
+      "manipulators": [
+        {
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "vk2",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "g"
+          },
+          "to": [
+            {
+              "shell_command": "open -a 'Atom.app'"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "description": "[VK2] b -> Tweetbot.app",
       "manipulators": [
         {

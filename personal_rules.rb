@@ -498,6 +498,15 @@ h = {
       ].vk2.basic,
     },
     {
+      description: '[VK2] g -> Atom.app',
+      manipulators: [
+        {
+          from: { key_code: 'g' },
+          to: [{ shell_command: "open -a 'Atom.app'" }],
+        },
+      ].vk2.basic,
+    },
+    {
       description: '[VK2] b -> Tweetbot.app',
       manipulators: [
         {
