@@ -1721,6 +1721,29 @@
       ]
     },
     {
+      "description": "[Terminal] VK2 + h -> backspace",
+      "manipulators": [
+        {
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "vk2",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "h"
+          },
+          "to": [
+            {
+              "key_code": "delete_or_backspace"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "description": "[Alacritty] o/p -> control+t control+p / control+t control+n",
       "manipulators": [
         {

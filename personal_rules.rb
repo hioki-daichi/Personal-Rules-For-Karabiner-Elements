@@ -214,6 +214,12 @@ h = {
       ].terminal_vk2.basic,
     },
     {
+      description: '[Terminal] VK2 + h -> backspace',
+      manipulators: [
+        { from: { key_code: 'h' }, to: [{ key_code: 'delete_or_backspace' }] },
+      ].vk2.basic,
+    },
+    {
       description: '[Alacritty] o/p -> control+t control+p / control+t control+n',
       manipulators: [
         { from: { key_code: 'o' }, to: [TMUX_PREFIX, { key_code: 'p', modifiers: ['control'] }] },
