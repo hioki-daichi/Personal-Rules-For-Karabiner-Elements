@@ -13,6 +13,7 @@ module BundleIdentifiers
   TERMINAL = 'com.googlecode.iterm2'
   VSCODE = 'com.microsoft.VSCode'
   ALACRITTY = 'io.alacritty'
+  INTELLIJ = 'com.jetbrains.intellij'
 end
 
 module Values
