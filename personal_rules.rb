@@ -462,6 +462,15 @@ h = {
       ].vk2.basic,
     },
     {
+      description: '[VK2] i -> IntelliJ IDEA.app',
+      manipulators: [
+        {
+          from: { key_code: 'i' },
+          to: [{ shell_command: "open -a 'IntelliJ IDEA.app'" }],
+        },
+      ].vk2.basic,
+    },
+    {
       description: '[VK2] e -> snip search by Alfred 4',
       manipulators: [
         {
