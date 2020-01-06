@@ -3862,7 +3862,7 @@
       ]
     },
     {
-      "description": "[VK2] . -> Skim.app",
+      "description": "[VK2] m -> Skim.app",
       "manipulators": [
         {
           "type": "basic",
@@ -3874,7 +3874,7 @@
             }
           ],
           "from": {
-            "key_code": "period"
+            "key_code": "m"
           },
           "to": [
             {

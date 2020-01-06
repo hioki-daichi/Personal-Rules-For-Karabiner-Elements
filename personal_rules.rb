@@ -525,10 +525,10 @@ h = {
       ].vk2.basic,
     },
     {
-      description: '[VK2] . -> Skim.app',
+      description: '[VK2] m -> Skim.app',
       manipulators: [
         {
-          from: { key_code: 'period' },
+          from: { key_code: 'm' },
           to: [{ shell_command: "open -a 'Skim.app'" }],
         },
       ].vk2.basic,
