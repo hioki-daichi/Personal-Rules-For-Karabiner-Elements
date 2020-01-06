@@ -424,14 +424,14 @@ h = {
     {
       description: '[VK2] ShiftIt',
       manipulators: [
-        { from: { key_code: 'h' }, to: [{ key_code: 'left_arrow', modifiers: %w[command control option] }] },
-        { from: { key_code: 'o' }, to: [{ key_code: 'right_arrow', modifiers: %w[command control option] }] },
-        { from: { key_code: 'n' }, to: [{ key_code: 'down_arrow', modifiers: %w[command control option] }] },
-        { from: { key_code: 'p' }, to: [{ key_code: 'up_arrow', modifiers: %w[command control option] }] },
-        { from: { key_code: 'u' }, to: [{ key_code: '1', modifiers: %w[control option command] }] },
-        { from: { key_code: 'i' }, to: [{ key_code: '2', modifiers: %w[control option command] }] },
-        { from: { key_code: 'm' }, to: [{ key_code: '3', modifiers: %w[control option command] }] },
-        { from: { key_code: 'comma' }, to: [{ key_code: '4', modifiers: %w[control option command] }] },
+        { from: { key_code: 'h', modifiers: { mandatory: ['control'] } }, to: [{ key_code: 'left_arrow', modifiers: %w[command control option] }] },
+        { from: { key_code: 'o', modifiers: { mandatory: ['control'] } }, to: [{ key_code: 'right_arrow', modifiers: %w[command control option] }] },
+        { from: { key_code: 'n', modifiers: { mandatory: ['control'] } }, to: [{ key_code: 'down_arrow', modifiers: %w[command control option] }] },
+        { from: { key_code: 'p', modifiers: { mandatory: ['control'] } }, to: [{ key_code: 'up_arrow', modifiers: %w[command control option] }] },
+        { from: { key_code: 'u', modifiers: { mandatory: ['control'] } }, to: [{ key_code: '1', modifiers: %w[control option command] }] },
+        { from: { key_code: 'i', modifiers: { mandatory: ['control'] } }, to: [{ key_code: '2', modifiers: %w[control option command] }] },
+        { from: { key_code: 'm', modifiers: { mandatory: ['control'] } }, to: [{ key_code: '3', modifiers: %w[control option command] }] },
+        { from: { key_code: 'comma', modifiers: { mandatory: ['control'] } }, to: [{ key_code: '4', modifiers: %w[control option command] }] },
       ].vk2.basic,
     },
     {

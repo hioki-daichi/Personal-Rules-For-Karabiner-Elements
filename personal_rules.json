@@ -3415,7 +3415,12 @@
             }
           ],
           "from": {
-            "key_code": "h"
+            "key_code": "h",
+            "modifiers": {
+              "mandatory": [
+                "control"
+              ]
+            }
           },
           "to": [
             {
@@ -3438,7 +3443,12 @@
             }
           ],
           "from": {
-            "key_code": "o"
+            "key_code": "o",
+            "modifiers": {
+              "mandatory": [
+                "control"
+              ]
+            }
           },
           "to": [
             {
@@ -3461,7 +3471,12 @@
             }
           ],
           "from": {
-            "key_code": "n"
+            "key_code": "n",
+            "modifiers": {
+              "mandatory": [
+                "control"
+              ]
+            }
           },
           "to": [
             {
@@ -3484,7 +3499,12 @@
             }
           ],
           "from": {
-            "key_code": "p"
+            "key_code": "p",
+            "modifiers": {
+              "mandatory": [
+                "control"
+              ]
+            }
           },
           "to": [
             {
@@ -3507,7 +3527,12 @@
             }
           ],
           "from": {
-            "key_code": "u"
+            "key_code": "u",
+            "modifiers": {
+              "mandatory": [
+                "control"
+              ]
+            }
           },
           "to": [
             {
@@ -3530,7 +3555,12 @@
             }
           ],
           "from": {
-            "key_code": "i"
+            "key_code": "i",
+            "modifiers": {
+              "mandatory": [
+                "control"
+              ]
+            }
           },
           "to": [
             {
@@ -3553,7 +3583,12 @@
             }
           ],
           "from": {
-            "key_code": "m"
+            "key_code": "m",
+            "modifiers": {
+              "mandatory": [
+                "control"
+              ]
+            }
           },
           "to": [
             {
@@ -3576,7 +3611,12 @@
             }
           ],
           "from": {
-            "key_code": "comma"
+            "key_code": "comma",
+            "modifiers": {
+              "mandatory": [
+                "control"
+              ]
+            }
           },
           "to": [
             {
