@@ -117,7 +117,7 @@ def rule_for_vscode_vk4(key_code, command_name)
 end
 
 h = {
-  title: 'Personal rules (@hioki-daichi)',
+  title: 'Personal rules (@hioki)',
   rules: [
     {
       description: 'lang1/international4 -> VK1',

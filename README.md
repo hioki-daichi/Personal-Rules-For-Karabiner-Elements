@@ -5,7 +5,7 @@
 If you paste the link below into the address bar of the browser, [Karabiner-Elements](https://pqrs.org/osx/karabiner/) will start up.
 
 ```
-karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/hioki-daichi/Personal-Rules-For-Karabiner-Elements/master/personal_rules.json
+karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/hioki/Personal-Rules-For-Karabiner-Elements/master/personal_rules.json
 ```
 
 ## How to develop
