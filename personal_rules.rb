@@ -12,8 +12,6 @@ end
 module BundleIdentifiers
   TERMINAL = 'com.googlecode.iterm2'
   VSCODE = 'com.microsoft.VSCode'
-  ALACRITTY = 'io.alacritty'
-  INTELLIJ = 'com.jetbrains.intellij'
 end
 
 module Values
@@ -29,7 +27,6 @@ module Conditions
 
   ON_TERMINAL = { type: 'frontmost_application_if', bundle_identifiers: [BundleIdentifiers::TERMINAL] }.freeze
   ON_VSCODE = { type: 'frontmost_application_if', bundle_identifiers: [BundleIdentifiers::VSCODE] }.freeze
-  ON_ALACRITTY = { type: 'frontmost_application_if', bundle_identifiers: [BundleIdentifiers::ALACRITTY] }.freeze
 end
 
 TMUX_PREFIX = { key_code: 't', modifiers: ['control'] }.freeze
@@ -67,14 +64,6 @@ class Array
     map! { |h| { conditions: [Conditions::ON_TERMINAL, Conditions::WITH_VK4] }.merge!(h) }
   end
 
-  def alacritty_vk1
-    map! { |h| { conditions: [Conditions::ON_ALACRITTY, Conditions::WITH_VK1] }.merge!(h) }
-  end
-
-  def alacritty_vk4
-    map! { |h| { conditions: [Conditions::ON_ALACRITTY, Conditions::WITH_VK4] }.merge!(h) }
-  end
-
   def vscode_vk4
     map! { |h| { conditions: [Conditions::ON_VSCODE, Conditions::WITH_VK4] }.merge!(h) }
   end
@@ -92,18 +81,6 @@ def rule_for_terminal_vk4(key_code)
   }
 end
 
-def rule_for_alacritty_vk4(key_code)
-  {
-    description: "[Alacritty][VK4] #{key_code} -> control+t #{key_code}",
-    manipulators: [
-      {
-        from: { key_code: key_code },
-        to: [TMUX_PREFIX, { key_code: key_code, modifiers: ['control'] }],
-      },
-    ].alacritty_vk4.basic,
-  }
-end
-
 def rule_for_vscode_vk4(key_code, command_name)
   {
     description: "[VSCODE][VK4] #{key_code} -> #{command_name}",
@@ -117,11 +94,11 @@ def rule_for_vscode_vk4(key_code, command_name)
 end
 
 h = {
-  title: 'Personal rules (@hioki)',
+  title: 'Personal rules',
   rules: [
     {
-      description: 'lang1/international4 -> VK1',
-      manipulators: %w[lang1 international4].map! do |key_code|
+      description: 'lang1 -> VK1',
+      manipulators: %w[lang1].map! do |key_code|
         {
           from: { key_code: key_code, modifiers: { optional: ['any'] } },
           to: [{ set_variable: { name: VirtualKeys::VK1, value: Values::ON } }],
@@ -131,8 +108,19 @@ h = {
       end.basic,
     },
     {
-      description: 'lang2/international5 -> VK2',
-      manipulators: %w[lang2 international5].map! do |key_code|
+      description: 'international4 -> VK1',
+      manipulators: %w[international4].map! do |key_code|
+        {
+          from: { key_code: key_code, modifiers: { optional: ['any'] } },
+          to: [{ set_variable: { name: VirtualKeys::VK1, value: Values::ON } }],
+          to_after_key_up: [{ set_variable: { name: VirtualKeys::VK1, value: Values::OFF } }],
+          to_if_alone: [{ key_code: 'japanese_kana' }],
+        }
+      end.basic,
+    },
+    {
+      description: 'lang2 -> VK2',
+      manipulators: %w[lang2].map! do |key_code|
         {
           from: { key_code: key_code, modifiers: { optional: ['any'] } },
           to: [{ set_variable: { name: VirtualKeys::VK2, value: Values::ON } }],
@@ -142,8 +130,29 @@ h = {
       end.basic,
     },
     {
-      description: 'right_gui/international2 -> VK3',
-      manipulators: %w[right_gui international2].map! do |key_code|
+      description: 'international5 -> VK2',
+      manipulators: %w[international5].map! do |key_code|
+        {
+          from: { key_code: key_code, modifiers: { optional: ['any'] } },
+          to: [{ set_variable: { name: VirtualKeys::VK2, value: Values::ON } }],
+          to_after_key_up: [{ set_variable: { name: VirtualKeys::VK2, value: Values::OFF } }],
+          to_if_alone: [{ key_code: 'japanese_eisuu' }],
+        }
+      end.basic,
+    },
+    {
+      description: 'right_gui -> VK3',
+      manipulators: %w[right_gui].map! do |key_code|
+        {
+          from: { key_code: key_code, modifiers: { optional: ['any'] } },
+          to: [{ set_variable: { name: VirtualKeys::VK3, value: Values::ON } }],
+          to_after_key_up: [{ set_variable: { name: VirtualKeys::VK3, value: Values::OFF } }],
+        }
+      end.basic,
+    },
+    {
+      description: 'international2 -> VK3',
+      manipulators: %w[international2].map! do |key_code|
         {
           from: { key_code: key_code, modifiers: { optional: ['any'] } },
           to: [{ set_variable: { name: VirtualKeys::VK3, value: Values::ON } }],
@@ -170,14 +179,6 @@ h = {
     rule_for_terminal_vk4('l'),
     rule_for_terminal_vk4('n'),
     rule_for_terminal_vk4('p'),
-    rule_for_alacritty_vk4('c'),
-    rule_for_alacritty_vk4('v'),
-    rule_for_alacritty_vk4('h'),
-    rule_for_alacritty_vk4('j'),
-    rule_for_alacritty_vk4('k'),
-    rule_for_alacritty_vk4('l'),
-    rule_for_alacritty_vk4('n'),
-    rule_for_alacritty_vk4('p'),
     rule_for_vscode_vk4('1', 'workbench.action.openSettingsJson'),
     rule_for_vscode_vk4('2', 'workbench.action.openGlobalKeybindingsFile'),
     rule_for_vscode_vk4('3', 'workbench.action.openGlobalKeybindings'),
@@ -220,25 +221,11 @@ h = {
       ].vk2.basic,
     },
     {
-      description: '[Alacritty] o/p -> control+t control+p / control+t control+n',
-      manipulators: [
-        { from: { key_code: 'o' }, to: [TMUX_PREFIX, { key_code: 'p', modifiers: ['control'] }] },
-        { from: { key_code: 'p' }, to: [TMUX_PREFIX, { key_code: 'n', modifiers: ['control'] }] },
-      ].alacritty_vk1.basic,
-    },
-    {
-      description: '[Terminal] z/y -> copy and paste',
+      description: '[Terminal] z/y -> copy',
       manipulators: [
         { from: { key_code: 'z' }, to: [TMUX_PREFIX, { key_code: 'close_bracket', modifiers: ['control'] }] },
         { from: { key_code: 'y' }, to: [{ key_code: 'return_or_enter' }, TMUX_PREFIX, { key_code: 'm', modifiers: ['control'] }] },
       ].terminal_vk1.basic,
-    },
-    {
-      description: '[Alacritty] z/y -> copy and paste',
-      manipulators: [
-        { from: { key_code: 'z' }, to: [TMUX_PREFIX, { key_code: 'close_bracket', modifiers: ['control'] }] },
-        { from: { key_code: 'y' }, to: [{ key_code: 'return_or_enter' }, TMUX_PREFIX, { key_code: 'm', modifiers: ['control'] }] },
-      ].alacritty_vk1.basic,
     },
     {
       description: '[Terminal] u/i -> shift+0 / shift+4',
@@ -246,13 +233,6 @@ h = {
         { from: { key_code: 'u' }, to: [{ key_code: '0', modifiers: ['shift'] }] },
         { from: { key_code: 'i' }, to: [{ key_code: '4', modifiers: ['shift'] }] },
       ].terminal_vk1.basic,
-    },
-    {
-      description: '[Alacritty] u/i -> shift+0 / shift+4',
-      manipulators: [
-        { from: { key_code: 'u' }, to: [{ key_code: '0', modifiers: ['shift'] }] },
-        { from: { key_code: 'i' }, to: [{ key_code: '4', modifiers: ['shift'] }] },
-      ].alacritty_vk1.basic,
     },
     {
       description: '[VK1] h/j/k/l -> cursor move',
@@ -379,12 +359,6 @@ h = {
       description: '[VK1] b -> window maximize (ShiftIt)',
       manipulators: [
         { from: { key_code: 'b' }, to: [{ key_code: 'm', modifiers: %w[control option command] }] },
-      ].vk1.basic,
-    },
-    {
-      description: '[VK1] w -> command+w',
-      manipulators: [
-        { from: { key_code: 'w' }, to: [{ key_code: 'w', modifiers: ['command'] }] },
       ].vk1.basic,
     },
     {
@@ -559,24 +533,6 @@ h = {
       ].vk2.basic,
     },
     {
-      description: '[VK2] : -> GoLand.app',
-      manipulators: [
-        {
-          from: { key_code: 'quote' },
-          to: [{ shell_command: "open -a 'GoLand.app'" }],
-        },
-      ].vk2.basic,
-    },
-    {
-      description: '[VK2] c -> Alacritty.app',
-      manipulators: [
-        {
-          from: { key_code: 'c' },
-          to: [{ shell_command: "open -a 'Alacritty.app'" }],
-        },
-      ].vk2.basic,
-    },
-    {
       description: '[VK2] w -> 1Password.app',
       manipulators: [
         {
@@ -584,23 +540,6 @@ h = {
           to: [{ shell_command: "open -a '1Password.app'" }],
         },
       ].vk2.basic,
-    },
-    {
-      description: '[VK3] q..[ -> !..\\',
-      manipulators: [
-        { from: { key_code: 'q' }, to: [{ key_code: '1', modifiers: ['shift'] }] },
-        { from: { key_code: 'w' }, to: [{ key_code: '2', modifiers: ['shift'] }] },
-        { from: { key_code: 'e' }, to: [{ key_code: '3', modifiers: ['shift'] }] },
-        { from: { key_code: 'r' }, to: [{ key_code: '4', modifiers: ['shift'] }] },
-        { from: { key_code: 't' }, to: [{ key_code: '5', modifiers: ['shift'] }] },
-        { from: { key_code: 'y' }, to: [{ key_code: '6', modifiers: ['shift'] }] },
-        { from: { key_code: 'u' }, to: [{ key_code: '7', modifiers: ['shift'] }] },
-        { from: { key_code: 'i' }, to: [{ key_code: '8', modifiers: ['shift'] }] },
-        { from: { key_code: 'o' }, to: [{ key_code: '9', modifiers: ['shift'] }] },
-        { from: { key_code: 'p' }, to: [{ key_code: 'hyphen', modifiers: ['shift'] }] },
-        { from: { key_code: 'open_bracket' }, to: [{ key_code: 'equal_sign', modifiers: ['shift'] }] },
-        { from: { key_code: 'close_bracket' }, to: [{ key_code: 'international3', modifiers: ['shift'] }] },
-      ].vk3.basic,
     },
     {
       description: '[VK3] a..: -> 1..-',
@@ -616,14 +555,6 @@ h = {
         { from: { key_code: 'l', modifiers: { optional: ['any'] } }, to: [{ key_code: '9' }] },
         { from: { key_code: 'semicolon', modifiers: { optional: ['any'] } }, to: [{ key_code: '0' }] },
         { from: { key_code: 'quote', modifiers: { optional: ['any'] } }, to: [{ key_code: 'hyphen' }] },
-      ].vk3.basic,
-    },
-    {
-      description: '[VK3] x/c/v -> {/(/"',
-      manipulators: [
-        { from: { key_code: 'x' }, to: [{ key_code: 'close_bracket', modifiers: ['shift'] }] },
-        { from: { key_code: 'c' }, to: [{ key_code: '8', modifiers: ['shift'] }] },
-        { from: { key_code: 'v' }, to: [{ key_code: '2', modifiers: ['shift'] }] },
       ].vk3.basic,
     },
     {
